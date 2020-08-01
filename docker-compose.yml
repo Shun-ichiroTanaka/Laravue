@@ -14,6 +14,7 @@ services:
     # コンテナとホスト側のディレクトリを同期する場所の指定。laravelのソースが入る予定の場所
     volumes:
       - ./backend:/var/www/html
+
   # MySQLを動かすコンテナ
   db:
     # Docker HubからMySQL5.7の公式イメージをダウンロードしてくる指定
