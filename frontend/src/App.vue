@@ -30,7 +30,7 @@
 </script>
 <style lang="scss" scoped>
   .v-enter {
-    transform: translate(-50px, 0);
+    transform: translate(-30px, 0);
     opacity: 0;
   }
   .v-enter-to {
@@ -44,7 +44,7 @@
     opacity: 1;
   }
   .v-leave-to {
-    transform: translate(100px, 0);
+    transform: translate(50px, 0);
     opacity: 0;
   }
   .v-leave-active {
