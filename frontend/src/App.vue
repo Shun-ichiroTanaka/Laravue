@@ -1,11 +1,30 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
+    <router-view></router-view>
   </div>
 </template>
+<script>
+  export default {};
+</script>
+<style lang="scss">
+  @import "@/assets/sass/_variables.scss";
 
-<style lang="scss"></style>
+  body {
+    background: $bg-white;
+    box-sizing: border-box !important;
+    clear: both !important;
+  }
+
+  .dark {
+    background: $black;
+    color: $white;
+
+    a {
+      color: $primary;
+    }
+
+    strong {
+      color: $white;
+    }
+  }
+</style>
