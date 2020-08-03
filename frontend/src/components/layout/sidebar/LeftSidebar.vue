@@ -1,64 +1,59 @@
 <template>
-  <div class="relative bg-sidebar h-screen w-64 hidden sm:block shadow-xl">
+  <div class="relative bg-sidebar w-64 hidden sm:block shadow-xl px-2">
     <div class="p-6">
-      <a
-        href="index.html"
-        class="text-3xl font-semibold uppercase hover:text-gray-300 cursor-pointer"
-        >Admin</a
+      <a href="/" class="text-3xl font-semibold uppercase cursor-pointer"
+        >Laravue</a
       >
-      <button
-        class="w-full bg-white cta-btn font-semibold py-2 mt-5 rounded-br-lg rounded-bl-lg rounded-tr-lg shadow-lg hover:shadow-xl hover:bg-gray-300 flex items-center justify-center cursor-pointer"
-      >
-        <i class="fas fa-plus mr-3"></i> New Report
-      </button>
     </div>
-    <nav class="text-base font-semibold pt-3">
-      <a
-        href="index.html"
-        class="flex items-center active-nav-link py-4 pl-6 nav-item"
+    <nav class="text-base font-semibold pt-3 ">
+      <router-link
+        to="/documentation"
+        class="flex items-center hover-left active-nav-link py-3 px-2 rounded-lg pl-4 nav-item text-gray"
       >
-        <i class="fas fa-tachometer-alt mr-3"></i>
-        Dashboard
-      </a>
-      <a
-        href="blank.html"
-        class="flex items-center opacity-75 hover:opacity-100 py-4 pl-6 nav-item"
+        <book-icon size="20" class="mr-3 active-icon"></book-icon>
+        Documentation</router-link
       >
-        <i class="fas fa-sticky-note mr-3"></i>
-        Blank Page
-      </a>
-      <a
-        href="tables.html"
-        class="flex items-center opacity-75 hover:opacity-100 py-4 pl-6 nav-item"
+
+      <router-link
+        to="/profile"
+        class="flex items-center hover-left opacity-75 hover:opacity-100 py-3 px-2 rounded-lg pl-4 nav-item text-gray"
       >
-        <i class="fas fa-table mr-3"></i>
+        <user-icon size="20" class="mr-3"></user-icon>
+        Profile
+      </router-link>
+
+      <router-link
+        to="/setting"
+        class="flex items-center hover-left opacity-75 hover:opacity-100 py-3 px-2 rounded-lg pl-4 nav-item text-gray"
+      >
+        <settings-icon size="20" class="mr-3"></settings-icon>
+        Setting
+      </router-link>
+      <router-link
+        to="/tables"
+        class="flex items-center hover-left opacity-75 hover:opacity-100 py-3 px-2 rounded-lg pl-4 nav-item text-gray"
+      >
+        <tablet-icon size="20" class="mr-3"></tablet-icon>
         Tables
-      </a>
-      <a
-        href="forms.html"
-        class="flex items-center opacity-75 hover:opacity-100 py-4 pl-6 nav-item"
+      </router-link>
+      <router-link
+        to="/forms"
+        class="flex items-center hover-left opacity-75 hover:opacity-100 py-3 px-2 rounded-lg pl-4 nav-item text-gray"
       >
-        <i class="fas fa-align-left mr-3"></i>
+        <grid-icon size="20" class="mr-3"></grid-icon>
         Forms
-      </a>
-      <a
-        href="tabs.html"
-        class="flex items-center opacity-75 hover:opacity-100 py-4 pl-6 nav-item"
+      </router-link>
+      <router-link
+        to="/calendar"
+        class="flex items-center hover-left opacity-75 hover:opacity-100 py-3 px-2 rounded-lg pl-4 nav-item text-gray"
       >
-        <i class="fas fa-tablet-alt mr-3"></i>
-        Tabbed Content
-      </a>
-      <a
-        href="calendar.html"
-        class="flex items-center opacity-75 hover:opacity-100 py-4 pl-6 nav-item"
-      >
-        <i class="fas fa-calendar mr-3"></i>
+        <calendar-icon size="20" class="mr-3"></calendar-icon>
         Calendar
-      </a>
+      </router-link>
     </nav>
     <a
       href="#"
-      class="absolute w-full upgrade-btn bottom-0 active-nav-link flex items-center justify-center py-4"
+      class="absolute w-full bottom-0 account-link flex items-center hover-left justify-center py-3 px-2 rounded-lg"
     >
       <i class="fas fa-arrow-circle-up mr-3"></i>
       Upgrade to Pro!
@@ -66,8 +61,25 @@
   </div>
 </template>
 <script>
+  // icon
+  import {
+    BookIcon,
+    TabletIcon,
+    UserIcon,
+    CalendarIcon,
+    SettingsIcon,
+    GridIcon,
+  } from "vue-feather-icons";
   export default {
     name: "LeftSidebar",
+    components: {
+      BookIcon,
+      TabletIcon,
+      UserIcon,
+      CalendarIcon,
+      SettingsIcon,
+      GridIcon,
+    },
   };
 </script>
 <style lang="scss" scoped>
@@ -79,29 +91,38 @@
 
   .bg-sidebar {
     background: #fff;
-  }
-
-  .cta-btn {
-    color: #3d68ff;
-  }
-
-  .upgrade-btn {
-    background: #1947ee;
-  }
-
-  .upgrade-btn:hover {
-    background: #0038fd;
+    height: 100vh;
+    overflow: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   .active-nav-link {
-    background: #1947ee;
+    color: white !important;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    background: #f857a6; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #ff5858,
+      #f857a6
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ff5858, #f857a6);
   }
 
-  .nav-item:hover {
-    background: #1947ee;
+  .nav-item {
+    color: #333;
+    transition: 0.2s ease-in;
   }
 
-  .account-link:hover {
-    background: #3d68ff;
+  .account-link {
+    color: white;
+    background: #f857a6;
+    background: -webkit-linear-gradient(to right, #ff5858, #f857a6);
+    background: linear-gradient(to right, #ff5858, #f857a6);
+  }
+  .hover-left:hover {
+    transform: translateX(3px);
+    transition: 0.2s ease-in-out;
   }
 </style>
