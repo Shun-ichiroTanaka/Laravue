@@ -114,7 +114,7 @@
 
   .nav-item {
     color: #333;
-    transition: 0.3s ease-in;
+    transition: 0.2s ease-in;
   }
 
   .account-link {
@@ -124,7 +124,7 @@
     background: linear-gradient(to right, #ff5858, #f857a6);
   }
   .hover-left:hover {
-    transform: translateX(10px);
-    transition: 0.3s ease;
+    transform: translateX(5px);
+    transition: 0.2s ease-in;
   }
 </style>
