@@ -1,8 +1,11 @@
 <template>
   <div class="relative bg-sidebar hidden sm:block shadow-xl px-2">
     <div class="p-6">
-      <a href="/" class="text-3xl font-semibold uppercase cursor-pointer"
-        >Laravue</a
+      <router-link
+        to="/"
+        class="text-3xl font-semibold uppercase cursor-pointer"
+      >
+        Laravue</router-link
       >
     </div>
     <nav class="text-base font-semibold pt-3 ">
