@@ -1,5 +1,5 @@
 <template>
-  <div class="relative bg-sidebar w-64 hidden sm:block shadow-xl px-2">
+  <div class="relative bg-sidebar hidden sm:block shadow-xl px-2">
     <div class="p-6">
       <a href="/" class="text-3xl font-semibold uppercase cursor-pointer"
         >Laravue</a
@@ -50,14 +50,14 @@
         <calendar-icon size="20" class="mr-3"></calendar-icon>
         Calendar
       </router-link>
+      <router-link
+        to="/info"
+        class="flex items-center hover-left opacity-75 hover:opacity-100 py-3 px-2 rounded-lg pl-4 nav-item text-gray"
+      >
+        <info-icon size="20" class="mr-3"></info-icon>
+        F&Q
+      </router-link>
     </nav>
-    <a
-      href="#"
-      class="absolute w-full bottom-0 account-link flex items-center hover-left justify-center py-3 px-2 rounded-lg"
-    >
-      <i class="fas fa-arrow-circle-up mr-3"></i>
-      Upgrade to Pro!
-    </a>
   </div>
 </template>
 <script>
@@ -69,6 +69,7 @@
     CalendarIcon,
     SettingsIcon,
     GridIcon,
+    InfoIcon,
   } from "vue-feather-icons";
   export default {
     name: "LeftSidebar",
@@ -79,6 +80,7 @@
       CalendarIcon,
       SettingsIcon,
       GridIcon,
+      InfoIcon,
     },
   };
 </script>
@@ -112,7 +114,7 @@
 
   .nav-item {
     color: #333;
-    transition: 0.2s ease-in;
+    transition: 0.3s ease-in;
   }
 
   .account-link {
@@ -122,7 +124,7 @@
     background: linear-gradient(to right, #ff5858, #f857a6);
   }
   .hover-left:hover {
-    transform: translateX(3px);
-    transition: 0.2s ease-in-out;
+    transform: translateX(10px);
+    transition: 0.3s ease;
   }
 </style>

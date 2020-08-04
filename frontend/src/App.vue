@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="flex">
-    <left-sidebar></left-sidebar>
-    <div class="w-full flex flex-col h-screen overflow-y-hidden">
+    <left-sidebar class="w-1/6"></left-sidebar>
+    <div class="w-5/6 flex flex-col h-screen overflow-y-hidden">
       <header-nav></header-nav>
 
       <div class="w-full overflow-x-hidden flex flex-col">
@@ -30,7 +30,7 @@
 </script>
 <style lang="scss" scoped>
   .v-enter {
-    transform: translate(-50px, 0);
+    transform: translate(0, -50px);
     opacity: 0;
   }
   .v-enter-to {
@@ -44,7 +44,7 @@
     opacity: 1;
   }
   .v-leave-to {
-    transform: translate(50px, 0);
+    transform: translate(0, 50px);
     opacity: 0;
   }
   .v-leave-active {
