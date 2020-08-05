@@ -60,6 +60,13 @@
         <info-icon size="20" class="mr-3"></info-icon>
         F&Q
       </router-link>
+      <router-link
+        to="/chart"
+        class="flex items-center hover-left opacity-75 hover:opacity-100 py-3 px-2 rounded-lg pl-4 nav-item text-gray"
+      >
+        <bar-chart-icon size="20" class="mr-3"></bar-chart-icon>
+        Chart
+      </router-link>
     </nav>
   </div>
 </template>
@@ -73,6 +80,7 @@
     SettingsIcon,
     GridIcon,
     InfoIcon,
+    BarChartIcon,
   } from "vue-feather-icons";
   export default {
     name: "LeftSidebar",
@@ -84,6 +92,7 @@
       SettingsIcon,
       GridIcon,
       InfoIcon,
+      BarChartIcon,
     },
   };
 </script>
@@ -127,7 +136,7 @@
     background: linear-gradient(to right, #ff5858, #f857a6);
   }
   .hover-left:hover {
-    transform: translateX(5px);
+    transform: translateX(10px);
     transition: 0.2s ease-in;
   }
 </style>

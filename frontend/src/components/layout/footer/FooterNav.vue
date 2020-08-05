@@ -1,8 +1,8 @@
 <template>
   <footer class="w-full bg-white text-right p-4">
     Built by
-    <a target="_blank" href="https://davidgrzyb.com" class="underline"
-      >David Grzyb</a
+    <a target="_blank" href="https://twitter.com/tana_fe" class="underline"
+      >Shun-ichiro Tanaka</a
     >.
   </footer>
 </template>
