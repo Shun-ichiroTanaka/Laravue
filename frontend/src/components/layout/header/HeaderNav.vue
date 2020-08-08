@@ -41,15 +41,4 @@
     props: ["mode"],
   };
 </script>
-<style lang="scss" scoped>
-  nav.navbar {
-    top: 0;
-    position: fixed !important;
-    width: 100%;
-    height: 6rem;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  }
-  .navbar-brand {
-    align-items: center !important;
-  }
-</style>
+<style lang="scss" scoped></style>

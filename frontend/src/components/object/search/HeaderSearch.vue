@@ -31,7 +31,7 @@
     &-box {
       padding: 3px 10px 3px 40px;
       overflow: hidden;
-      height: 3rem;
+      height: 3rem !important;
       border: none;
       background: #edf2f7;
       &:focus {
