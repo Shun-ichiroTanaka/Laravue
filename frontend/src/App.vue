@@ -1,18 +1,24 @@
 <template>
-  <div id="app" class="flex">
-    <left-sidebar class="w-1/6"></left-sidebar>
-    <div class="w-5/6 flex flex-col h-screen overflow-y-hidden">
-      <header-nav></header-nav>
+  <div id="app" class="flex flex-col">
+    <header-nav class="sticky"></header-nav>
 
-      <div class="w-full overflow-x-hidden flex flex-col">
-        <main class="w-full flex-grow p-6">
+    <div class="w-full flex lg:py-8 lg:px-24">
+      <left-sidebar class="w-1/5 shadow-xl"></left-sidebar>
+
+      <div
+        class="w-3/5 overflow-x-hidden flex flex-col px-4 rounded-lg shadow-xl"
+      >
+        <main class="w-full flex-grow p-6 bg-white">
           <transition mode="out-in">
             <router-view></router-view>
           </transition>
         </main>
-        <footer-nav></footer-nav>
       </div>
+
+      <div class="w-1/5 shadow-xl"></div>
     </div>
+
+    <footer-nav></footer-nav>
   </div>
 </template>
 <script>

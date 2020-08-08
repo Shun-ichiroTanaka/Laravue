@@ -1,3 +1,7 @@
+<!-- =================================================
+
+
+===================================================-->
 <script>
   import { Radar } from "vue-chartjs";
 
@@ -18,12 +22,12 @@
           datasets: [
             {
               label: "My First dataset",
-              backgroundColor: "rgba(179,181,198,0.2)",
-              borderColor: "rgba(179,181,198,1)",
-              pointBackgroundColor: "rgba(179,181,198,1)",
+              backgroundColor: "rgba(65,211,189,.2)",
+              borderColor: "rgba(65,211,189,1)",
+              pointBackgroundColor: "rgba(65,211,189,1)",
               pointBorderColor: "#fff",
               pointHoverBackgroundColor: "#fff",
-              pointHoverBorderColor: "rgba(179,181,198,1)",
+              pointHoverBorderColor: "rgba(65,211,189,1)",
               data: [65, 59, 90, 81, 56, 55, 40],
             },
             {

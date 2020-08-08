@@ -24,7 +24,7 @@
           datasets: [
             {
               backgroundColor: [this.gradient, this.gradient2, "#00D8FF"],
-              data: [40, 20, 10],
+              data: [25, 15, 10, 10, 20, 20],
             },
           ],
         },

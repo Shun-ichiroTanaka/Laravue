@@ -1,47 +1,31 @@
 <template>
   <div>
-    <header class=" w-full flex items-center bg-white py-2 px-6 hidden sm:flex">
-      <div class="relative">
-        <div
-          @click="show = !show"
-          class="flex justify-end items-center cursor-pointer"
-        >
-          Justin Bieber
+    <header
+      class=" w-full lg:h-20 flex items-center bg-white py-2 lg:px-24 hidden sm:flex"
+    >
+      <router-link
+        to="/"
+        class="lg:w-1/5 text-3xl font-semibold uppercase cursor-pointer"
+      >
+        Laravue</router-link
+      >
+      <form class="lg:w-3/5 px-4">
+        <div class="relative flex w-full h-full py-4 items-center">
+          <input
+            type="text"
+            name=""
+            placeholder="Search for..."
+            class="w-full h-full search-box rounded-lg"
+          />
           <button
-            class="ml-2 z-10 w-12 h-12 rounded-full overflow-hidden border-4 border-gray-400 hover:border-gray-300 focus:border-gray-300 focus:outline-none"
+            type="submit"
+            class="search-btn absolute top-auto flex items-center justify-center"
           >
-            <img src="https://source.unsplash.com/uJ8LNVCBjFQ/400x400" />
+            <search-icon size="20" class=""></search-icon>
           </button>
         </div>
-
-        <transition>
-          <div v-if="show">
-            <div
-              class="dropdown-menu absolute max-w-xs z-50 bg-white rounded-lg shadow-lg right-0"
-            >
-              <div class="py-2">
-                <a
-                  href="#"
-                  class="flex justify-start items-center block px-4 py-2 rounded-lg account-link whitespace-no-wrap cursor-pointer"
-                  ><user-icon size="1x" class="mr-2"></user-icon> Profile</a
-                >
-                <a
-                  href="#"
-                  class="flex justify-start items-center block px-4 py-2 rounded-lg account-link whitespace-no-wrap cursor-pointer"
-                  ><mail-icon size="1x" class="mr-2"></mail-icon>Mail</a
-                >
-                <a
-                  href="#"
-                  class="flex justify-start items-center block px-4 py-2 rounded-lg account-link whitespace-no-wrap cursor-pointer"
-                  ><log-out-icon size="1x" class="mr-2"></log-out-icon>Sign
-                  Out</a
-                >
-              </div>
-            </div>
-          </div>
-        </transition>
-        <div class="dropdown-bg" @click="show = false" v-if="show"></div>
-      </div>
+      </form>
+      <div class="lg:1-1/5"></div>
     </header>
 
     <!-- Mobile Header & Nav -->
@@ -49,29 +33,19 @@
   </div>
 </template>
 <script>
-  // import Toggle from "@/components/object/button/Toggle";
-
-  import { UserIcon, MailIcon, LogOutIcon } from "vue-feather-icons";
+  import { SearchIcon } from "vue-feather-icons";
 
   export default {
     name: "HeaderNav",
     data() {
       return {
         show: false,
-        logo: require("@/assets/images/bulma.png"),
       };
     },
     components: {
-      // Toggle,
-      MailIcon,
-      UserIcon,
-      LogOutIcon,
+      SearchIcon,
     },
-    methods: {
-      click() {
-        this.show = !this.show;
-      },
-    },
+    methods: {},
     // props: ["mode"],
   };
 </script>
@@ -86,35 +60,22 @@
   .navbar-brand {
     align-items: center !important;
   }
-  .dropdown-menu {
-  }
-  .dropdown-bg {
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 2;
-  }
-
-  .v-enter-active,
-  .v-leave-active {
-    transition: all 0.3s ease;
-  }
-
-  .v-enter {
-    transform: translateY(-10px);
-  }
-
-  .v-enter,
-  .v-leave-to {
-    opacity: 0;
-    transform: translateY(-10px);
-    -webkit-transform: translateY(-10px);
-    -moz-transform: translateY(-10px);
-    -ms-transform: translateY(-10px);
-    -o-transform: translateY(-10px);
+  .search {
+    &-box {
+      padding: 3px 10px 3px 40px;
+      overflow: hidden;
+      height: 3rem;
+      border: none;
+      background: #edf2f7;
+      &:focus {
+        outline: 0;
+        background: white;
+        border: 1px solid #bac2c6;
+        transition: 0.1s ease;
+      }
+    }
+    &-btn {
+      left: 10px;
+    }
   }
 </style>

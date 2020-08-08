@@ -1,18 +1,18 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "@/views/Home.vue";
-import Index from "@/views/Index.vue";
 Vue.use(VueRouter);
 
 const routes = [{
     path: "/",
     name: "Index",
-    component: Index
+    component: () =>
+      import("@/views/Index.vue")
   },
   {
     path: "/home",
     name: "Home",
-    component: Home
+    component: () =>
+      import("@/views/Home.vue")
   },
   {
     path: "/about",
@@ -25,11 +25,21 @@ const routes = [{
     name: "Documentation",
     component: () =>
       import("@/views/Documentation.vue")
-  },  {
+  }, {
     path: "/profile",
     name: "Profile",
     component: () =>
       import("@/views/Profile.vue")
+  }, {
+    path: "/chart",
+    name: "Chart",
+    component: () =>
+      import("@/views/Chart.vue")
+  },{
+    path: "/form",
+    name: "Form",
+    component: () =>
+      import("@/views/Form.vue")
   }
 ];
 
