@@ -35,11 +35,16 @@ const routes = [{
     name: "Chart",
     component: () =>
       import("@/views/Chart.vue")
-  },{
+  }, {
     path: "/form",
     name: "Form",
     component: () =>
       import("@/views/Form.vue")
+  }, {
+    path: "/darkmode",
+    name: "Darkmode",
+    component: () =>
+      import("@/views/Darkmode.vue")
   }
 ];
 

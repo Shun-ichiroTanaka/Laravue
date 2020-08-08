@@ -1,12 +1,27 @@
 <template>
   <div>
-    <h1 class="text-3xl text-black pb-6">Chart</h1>
+    <h1 class="text-3xl  pb-6">Chart</h1>
     <div class="flex flex-wrap w-full">
-      <area-chart class="shadow-lg w-full p-4 m-2 rounded-lg"></area-chart>
-      <pie-chart class="shadow-lg w-full p-4 m-2 rounded-lg"></pie-chart>
-      <bar-chart class="shadow-lg w-full p-4 m-2 rounded-lg"></bar-chart>
-      <radar-chart class="shadow-lg w-full p-4 m-2 rounded-lg"></radar-chart>
-      <line-chart class="shadow-lg w-full p-4 m-2 rounded-lg"></line-chart>
+      <div class="w-full p-4 m-2">
+        <h2 class="text-2xl">Area Chart</h2>
+        <area-chart></area-chart>
+      </div>
+      <div class="w-full p-4 m-2">
+        <h2 class="text-2xl">Pie Chart</h2>
+        <pie-chart></pie-chart>
+      </div>
+      <div class="w-full p-4 m-2">
+        <h2 class="text-2xl">Bar Chart</h2>
+        <bar-chart></bar-chart>
+      </div>
+      <div class="w-full p-4 m-2">
+        <h2 class="text-2xl">Radar Chart</h2>
+        <radar-chart></radar-chart>
+      </div>
+      <div class="w-full p-4 m-2">
+        <h2 class="text-2xl">Line Chart</h2>
+        <line-chart></line-chart>
+      </div>
     </div>
   </div>
 </template>

@@ -12,7 +12,6 @@
       <router-link
         to="/profile"
         class="flex items-center hover-left opacity-75 hover:opacity-100 py-3 px-2 rounded-lg pl-6 nav-item text-gray"
-    
       >
         <user-icon size="20" class="mr-3"></user-icon>
         Profile
@@ -38,6 +37,13 @@
       >
         <grid-icon size="20" class="mr-3"></grid-icon>
         Form
+      </router-link>
+      <router-link
+        to="/darkmode"
+        class="flex items-center hover-left opacity-75 hover:opacity-100 py-3 px-2 rounded-lg pl-6 nav-item text-gray"
+      >
+        <circle-icon size="20" class="mr-3"></circle-icon>
+        Darkmode
       </router-link>
       <router-link
         to="/calendar"
@@ -74,6 +80,7 @@
     GridIcon,
     InfoIcon,
     BarChartIcon,
+    CircleIcon,
   } from "vue-feather-icons";
   export default {
     name: "LeftSidebar",
@@ -86,6 +93,7 @@
       GridIcon,
       InfoIcon,
       BarChartIcon,
+      CircleIcon,
     },
   };
 </script>

@@ -11,7 +11,7 @@
         type="submit"
         class="search-btn absolute top-auto flex items-center justify-center"
       >
-        <search-icon size="20" class="" style="stroke:#8b8b8b;"></search-icon>
+        <search-icon size="20" class="search-icon"></search-icon>
       </button>
     </form>
   </div>
@@ -43,6 +43,26 @@
     }
     &-btn {
       left: 10px;
+    }
+    &-icon {
+      stroke: #8b8b8b;
+    }
+  }
+  .dark {
+    .search {
+      &-box {
+        background: #16191b;
+        &:focus {
+          background: #16191b;
+          border: none;
+        }
+        &::placeholder {
+          color: white;
+        }
+      }
+      &-icon {
+        stroke: white;
+      }
     }
   }
 </style>

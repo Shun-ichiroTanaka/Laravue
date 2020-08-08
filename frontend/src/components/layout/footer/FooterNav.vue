@@ -20,8 +20,7 @@
 <style lang="scss" scoped>
   .dark {
     footer {
-      background: #181a1b;
-      box-shadow: 1px 0 0 0 rgba(255, 255, 255, 0.8);
+      background: #1e2124;
     }
   }
 </style>

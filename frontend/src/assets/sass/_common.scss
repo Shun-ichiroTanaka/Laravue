@@ -10,6 +10,7 @@ body {
     font-family: "Varela Round", sans-serif;
 }
 
+
 .btn {
     &:hover {
         background: $bg-white;
@@ -41,11 +42,5 @@ body {
         color: $white;
     }
 
-    .btn {
-        background: $black;
 
-        &:hover {
-            background: $secondary-black;
-        }
-    }
 }
