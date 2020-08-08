@@ -1,5 +1,5 @@
 <template>
-  <footer class="w-full bg-white text-right p-4">
+  <footer class="w-full text-right p-4">
     Built by
     <a target="_blank" href="https://twitter.com/tana_fe" class="underline"
       >Shun-ichiro Tanaka</a

@@ -2,21 +2,11 @@
   <div>
     <h1 class="text-3xl text-black pb-6">Chart</h1>
     <div class="flex flex-wrap w-full">
-      <area-chart
-        class="shadow-lg w-full bg-white p-4 m-2 rounded-lg"
-      ></area-chart>
-      <pie-chart
-        class="shadow-lg w-full bg-white p-4 m-2 rounded-lg"
-      ></pie-chart>
-      <bar-chart
-        class="shadow-lg w-full bg-white p-4 m-2 rounded-lg"
-      ></bar-chart>
-      <radar-chart
-        class="shadow-lg w-full bg-white p-4 m-2 rounded-lg"
-      ></radar-chart>
-      <line-chart
-        class="shadow-lg w-full bg-white p-4 m-2 rounded-lg"
-      ></line-chart>
+      <area-chart class="shadow-lg w-full p-4 m-2 rounded-lg"></area-chart>
+      <pie-chart class="shadow-lg w-full p-4 m-2 rounded-lg"></pie-chart>
+      <bar-chart class="shadow-lg w-full p-4 m-2 rounded-lg"></bar-chart>
+      <radar-chart class="shadow-lg w-full p-4 m-2 rounded-lg"></radar-chart>
+      <line-chart class="shadow-lg w-full p-4 m-2 rounded-lg"></line-chart>
     </div>
   </div>
 </template>

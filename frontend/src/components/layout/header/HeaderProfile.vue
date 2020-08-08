@@ -16,7 +16,7 @@
       <transition>
         <div v-if="show">
           <div
-            class="dropdown-menu absolute max-w-xs z-50 bg-white rounded-lg shadow-lg right-0"
+            class="dropdown-menu absolute max-w-xs z-50 rounded-lg shadow-lg right-0"
           >
             <div class="py-2">
               <a

@@ -3,7 +3,7 @@
     <nav class="text-base font-semibold pt-3 ">
       <router-link
         to="/documentation"
-        class="flex items-center hover-left active-nav-link py-3 px-2 rounded-lg pl-6 nav-item text-gray"
+        class="flex items-center hover-left py-3 px-2 rounded-lg pl-6 nav-item text-gray"
       >
         <book-icon size="20" class="mr-3 active-icon"></book-icon>
         Documentation</router-link
@@ -12,6 +12,7 @@
       <router-link
         to="/profile"
         class="flex items-center hover-left opacity-75 hover:opacity-100 py-3 px-2 rounded-lg pl-6 nav-item text-gray"
+    
       >
         <user-icon size="20" class="mr-3"></user-icon>
         Profile
@@ -96,24 +97,12 @@
   }
 
   .bg-sidebar {
-    background: #fff;
-    height: 100vh;
+    // background: #fff;
+    // height: calc(100vh - 6rem);
     overflow: scroll;
     &::-webkit-scrollbar {
       display: none;
     }
-  }
-
-  .active-nav-link {
-    color: white !important;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    background: #f857a6; /* fallback for old browsers */
-    background: -webkit-linear-gradient(
-      to right,
-      #ff5858,
-      #f857a6
-    ); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #ff5858, #f857a6);
   }
 
   .nav-item {
@@ -121,11 +110,9 @@
     transition: 0.2s ease-in;
   }
 
-  .account-link {
+  .router-link-active {
     color: white;
-    background: #f857a6;
-    background: -webkit-linear-gradient(to right, #ff5858, #f857a6);
-    background: linear-gradient(to right, #ff5858, #f857a6);
+    background: #01b6ad;
   }
   .hover-left:hover {
     transform: translateX(7px);

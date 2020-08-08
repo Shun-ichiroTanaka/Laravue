@@ -1,24 +1,22 @@
 <template>
-  <div id="app" class="flex flex-col">
-    <header-nav class="sticky"></header-nav>
+  <div id="app" class="flex flex-col" :class="mode">
+    <header-nav :mode="mode" @toggle="toggle" class="header"></header-nav>
 
-    <div class="w-full flex lg:py-8 lg:px-24">
-      <left-sidebar class="w-1/5 shadow-xl"></left-sidebar>
+    <div class="main w-full flex lg:px-24 overflow-y-scroll">
+      <left-sidebar class="w-1/5"></left-sidebar>
 
-      <div
-        class="w-3/5 overflow-x-hidden flex flex-col px-4 rounded-lg shadow-xl"
-      >
-        <main class="w-full flex-grow p-6 bg-white">
+      <div class=" w-3/5 overflow-x-hidden scroll-none flex flex-col mx-4">
+        <main class="w-full flex-grow p-6 rounded-lg">
           <transition mode="out-in">
-            <router-view></router-view>
+            <router-view :mode="mode"></router-view>
           </transition>
         </main>
+
+        <footer-nav class="footer"></footer-nav>
       </div>
 
-      <div class="w-1/5 shadow-xl"></div>
+      <div class="w-1/5"></div>
     </div>
-
-    <footer-nav></footer-nav>
   </div>
 </template>
 <script>
@@ -27,14 +25,37 @@
   import LeftSidebar from "@/components/layout/sidebar/LeftSidebar";
 
   export default {
+    data() {
+      return {
+        mode: "dark",
+      };
+    },
     components: {
       HeaderNav,
       FooterNav,
       LeftSidebar,
     },
+    created() {
+      window.addEventListener("keyup", this.keyPress);
+    },
+    methods: {
+      toggle() {
+        if (this.mode === "dark") {
+          this.mode = "light";
+        } else {
+          this.mode = "dark";
+        }
+      },
+    },
   };
 </script>
 <style lang="scss" scoped>
+  .header {
+    height: 6rem;
+  }
+  .main {
+    height: calc(100vh - 6rem);
+  }
   .v-enter {
     transform: translate(0, -30px);
     opacity: 0;

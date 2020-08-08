@@ -5,7 +5,7 @@
 }
 
 body {
-    background: #eef0f7;
+    background: #fff;
     clear: both !important;
     font-family: "Varela Round", sans-serif;
 }
@@ -20,7 +20,27 @@ body {
     }
 }
 
+.scroll-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
 .dark {
+    background: $black;
+    color: $white;
+
+    a {
+        color: $white;
+    }
+
+    strong {
+        color: $white;
+    }
+
     .btn {
         background: $black;
 

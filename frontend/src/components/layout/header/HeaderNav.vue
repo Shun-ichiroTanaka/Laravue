@@ -1,7 +1,7 @@
 <template>
   <div>
     <header
-      class=" w-full lg:h-20 flex items-center bg-white py-2 lg:px-24 hidden sm:flex"
+      class=" w-full lg:h-20 flex items-center py-2 lg:px-24 hidden sm:flex"
     >
       <router-link
         to="/"
@@ -9,23 +9,13 @@
       >
         Laravue</router-link
       >
-      <form class="lg:w-3/5 px-4">
-        <div class="relative flex w-full h-full py-4 items-center">
-          <input
-            type="text"
-            name=""
-            placeholder="Search for..."
-            class="w-full h-full search-box rounded-lg"
-          />
-          <button
-            type="submit"
-            class="search-btn absolute top-auto flex items-center justify-center"
-          >
-            <search-icon size="20" class=""></search-icon>
-          </button>
-        </div>
-      </form>
-      <div class="lg:1-1/5"></div>
+
+      <header-search></header-search>
+
+      <div class="lg:w-1/5 text-primary flex items-center justify-start">
+        <div class="ml-4 mr-8">v.1.0.0</div>
+        <toggle :mode="mode" @toggle="$emit('toggle')"></toggle>
+      </div>
     </header>
 
     <!-- Mobile Header & Nav -->
@@ -33,7 +23,8 @@
   </div>
 </template>
 <script>
-  import { SearchIcon } from "vue-feather-icons";
+  import HeaderSearch from "@/components/object/search/HeaderSearch";
+  import Toggle from "@/components/object/button/Toggle";
 
   export default {
     name: "HeaderNav",
@@ -43,10 +34,11 @@
       };
     },
     components: {
-      SearchIcon,
+      HeaderSearch,
+      Toggle,
     },
     methods: {},
-    // props: ["mode"],
+    props: ["mode"],
   };
 </script>
 <style lang="scss" scoped>
@@ -59,23 +51,5 @@
   }
   .navbar-brand {
     align-items: center !important;
-  }
-  .search {
-    &-box {
-      padding: 3px 10px 3px 40px;
-      overflow: hidden;
-      height: 3rem;
-      border: none;
-      background: #edf2f7;
-      &:focus {
-        outline: 0;
-        background: white;
-        border: 1px solid #bac2c6;
-        transition: 0.1s ease;
-      }
-    }
-    &-btn {
-      left: 10px;
-    }
   }
 </style>
