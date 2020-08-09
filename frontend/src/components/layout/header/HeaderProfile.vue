@@ -72,24 +72,9 @@
   };
 </script>
 <style lang="scss" scoped>
-  .dropdown-bg {
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 2;
-  }
-
   .v-enter-active,
   .v-leave-active {
     transition: all 0.3s ease;
-  }
-
-  .v-enter {
-    transform: translateY(-10px);
   }
 
   .v-enter,

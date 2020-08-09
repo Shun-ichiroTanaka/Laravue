@@ -15,16 +15,16 @@ const routes = [{
       import("@/views/Home.vue")
   },
   {
-    path: "/about",
-    name: "About",
-    component: () =>
-      import("@/views/About.vue")
-  },
-  {
     path: "/documentation",
-    name: "Documentation",
+    name: 'Documentation',
     component: () =>
-      import("@/views/Documentation.vue")
+      import("@/views/Documentation.vue"),
+  }, {
+    path: '/about',
+    name: 'Laravue',
+    component: () =>
+      import("@/views/documentation/Laravue.vue"),
+
   }, {
     path: "/profile",
     name: "Profile",

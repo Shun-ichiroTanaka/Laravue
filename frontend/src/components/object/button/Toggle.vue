@@ -18,39 +18,6 @@
   };
 </script>
 <style lang="scss" scoped>
-  body {
-    margin: 0px;
-    background-color: #f8f8f8;
-  }
-
-  h1 {
-    font-family: Segoe UI;
-    text-align: center;
-    line-height: 42px;
-    padding-bottom: 23px;
-    margin: 10px 0px;
-    border-bottom: 1px solid #dadada;
-  }
-
-  #hash-symbol {
-    color: #484848;
-    font-size: 42px;
-    position: relative;
-    top: 4px;
-  }
-
-  #app-name {
-    color: #f19000;
-  }
-
-  section {
-    width: 250px;
-    margin: 100px auto;
-    padding: 60px;
-    background-color: #fff;
-    border-radius: 35px;
-  }
-
   .toggle-btn {
     position: relative;
     width: 70px;

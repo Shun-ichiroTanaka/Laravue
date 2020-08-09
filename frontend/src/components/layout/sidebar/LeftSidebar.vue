@@ -1,21 +1,7 @@
 <template>
   <div class="relative bg-sidebar hidden sm:block px-2">
     <nav class="text-base font-semibold pt-3 ">
-      <router-link
-        to="/documentation"
-        class="flex items-center hover-left py-3 px-2 rounded-full pl-6 nav-item text-gray"
-      >
-        <book-icon size="20" class="mr-3 active-icon"></book-icon>
-        Documentation</router-link
-      >
-
-      <router-link
-        to="/profile"
-        class="flex items-center hover-left opacity-75 hover:opacity-100 py-3 px-2 rounded-full pl-6 nav-item text-gray"
-      >
-        <user-icon size="20" class="mr-3"></user-icon>
-        Profile
-      </router-link>
+      <left-sidebar-item></left-sidebar-item>
 
       <router-link
         to="/setting"
@@ -70,11 +56,11 @@
   </div>
 </template>
 <script>
+  import LeftSidebarItem from "@/components/layout/sidebar/LeftSidebarItem";
+
   // icon
   import {
-    BookIcon,
     TabletIcon,
-    UserIcon,
     CalendarIcon,
     SettingsIcon,
     GridIcon,
@@ -84,16 +70,20 @@
   } from "vue-feather-icons";
   export default {
     name: "LeftSidebar",
+    data() {
+      return {
+        show: false,
+      };
+    },
     components: {
-      BookIcon,
       TabletIcon,
-      UserIcon,
       CalendarIcon,
       SettingsIcon,
       GridIcon,
       InfoIcon,
       BarChartIcon,
       CircleIcon,
+      LeftSidebarItem,
     },
   };
 </script>
@@ -118,10 +108,10 @@
     transition: 0.2s ease-in;
   }
 
-  .router-link-active {
-    color: white;
-    background: #23b5af;
-  }
+  // .router-link-active {
+  //   color: white;
+  //   background: #23b5af;
+  // }
   .hover-left:hover {
     transform: translateX(7px);
     transition: 0.2s ease-in;
