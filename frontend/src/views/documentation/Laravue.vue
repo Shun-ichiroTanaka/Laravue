@@ -7,7 +7,7 @@
       </div>
 
       <div class="my-24">
-        <h2 class="text-xl pb-6 font-medium">Overview</h2>
+        <lv-h2>Overview</lv-h2>
         <p class="mb-4">
           Laravueとは、PHPフレームワークであるLaravelとJavascriptフレームワークであるVue.jsを用いた
           フロントエンド開発を想定した強力なテンプレートキットです。
@@ -15,7 +15,7 @@
       </div>
 
       <div class="my-24">
-        <h2 class="text-xl pb-6 font-medium">Feature</h2>
+        <lv-h2>Feature</lv-h2>
         <div class="">
           <p class="mb-4">
             BackendとFrontendを完全に切り分けた構成となっていることにより、
@@ -26,7 +26,8 @@
       </div>
 
       <div class="my-24">
-        <h2 class="text-xl pb-6 font-medium">Development environment</h2>
+        <lv-h2>Development environment</lv-h2>
+
         <div class="">
           <p class="mb-4">
             ・Docker --- Apache, MySQL
@@ -41,10 +42,13 @@
 </template>
 <script>
   import LvH1 from "@/components/object/text/LvH1";
+  import LvH2 from "@/components/object/text/LvH2";
+
   export default {
     name: "Laravue",
     components: {
       LvH1,
+      LvH2,
     },
   };
 </script>
