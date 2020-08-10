@@ -17,18 +17,6 @@
   </div>
 </template>
 <script>
-  // icon
-  import // BookIcon,
-  // TabletIcon,
-  // UserIcon,
-  // CalendarIcon,
-  // SettingsIcon,
-  // GridIcon,
-  // InfoIcon,
-  // BarChartIcon,
-  // CircleIcon,
-  // CodeIcon,
-  "vue-feather-icons";
   export default {
     name: "LeftSidebarItem",
     data() {
@@ -36,18 +24,7 @@
         show: false,
       };
     },
-    components: {
-      // BookIcon,
-      // TabletIcon,
-      // UserIcon,
-      // CalendarIcon,
-      // SettingsIcon,
-      // GridIcon,
-      // InfoIcon,
-      // BarChartIcon,
-      // CircleIcon,
-      // CodeIcon,
-    },
+    components: {},
     methods: {
       mouseover() {
         this.show = true;

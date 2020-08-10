@@ -6,7 +6,7 @@
       <left-sidebar class="w-1/5"></left-sidebar>
 
       <div class=" w-3/5 overflow-x-hidden scroll-none flex flex-col mx-4">
-        <main class="w-full flex-grow p-6 rounded-lg">
+        <main class="main-bg w-full flex-grow p-6 rounded-lg">
           <transition mode="out-in">
             <router-view :mode="mode"></router-view>
           </transition>
@@ -50,6 +50,14 @@
   };
 </script>
 <style lang="scss" scoped>
+  .main-bg {
+    background: #eff2f6;
+  }
+  .dark {
+    .main-bg {
+      background: #151518;
+    }
+  }
   .header {
     height: 6rem;
   }

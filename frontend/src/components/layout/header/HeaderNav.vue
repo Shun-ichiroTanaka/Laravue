@@ -5,7 +5,7 @@
     >
       <router-link
         to="/"
-        class="lg:w-1/5 text-3xl font-semibold uppercase cursor-pointer"
+        class="lg:w-1/5 text-2xl font-semibold uppercase cursor-pointer"
       >
         Laravue</router-link
       >
