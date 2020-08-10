@@ -2,7 +2,7 @@
   <div class="relative bg-sidebar hidden sm:block px-2">
     <nav class="text-base font-semibold pt-3 ">
       <p
-        class="text-lg flex items-center  cursor-default opacity-75 hover:opacity-100 py-3 px-2 rounded-full pl-6"
+        class="text-lg flex items-center  cursor-default py-3 px-2 rounded-full pl-6"
       >
         Documentation
       </p>
@@ -15,7 +15,7 @@
       </router-link>
 
       <h3
-        class="text-lg flex items-center cursor-default opacity-75 hover:opacity-100 py-3 px-2 rounded-full pl-6"
+        class="text-lg flex items-center cursor-default py-3 px-2 rounded-full pl-6"
       >
         Components
       </h3>
