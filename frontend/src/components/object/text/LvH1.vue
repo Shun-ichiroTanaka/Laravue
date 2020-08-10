@@ -8,9 +8,9 @@
 </script>
 <style lang="scss" scoped>
   .h1 {
-    font-size: 2rem;
-    line-height: 2rem;
-    margin: 2rem 0;
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    margin: 1.8rem 0;
     border-bottom: 1px solid #dadada;
   }
   .dark {

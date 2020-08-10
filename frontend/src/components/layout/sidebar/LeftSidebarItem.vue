@@ -8,7 +8,7 @@
     </router-link>
     <transition>
       <div v-if="show" @close="show = false">
-        <div class="leftside-bg z-50 absolute w-64 h-screen overflow-hidden">
+        <div class="leftside-bg z-50 absolute w-64 overflow-hidden">
           <slot name="docume" v-if="this.$slots.docume"></slot>
           <slot name="compo" v-if="this.$slots.compo"></slot>
         </div>

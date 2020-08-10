@@ -1,17 +1,23 @@
 <template>
-  <div class="">
-    <code-icon @click="open" size="20" class="mt-4 cursor-pointer"></code-icon>
+  <div class="w-full flex justify-center items-center my-8">
+    <div
+      class="code-bg flex items-center justify-center w-8 h-8 cursor-pointer rounded-full shadow-lg"
+    >
+      <code-icon @click="open" size="14"></code-icon>
+    </div>
     <transition>
       <div
         class="my-modal fixed w-full flex justify-center items-center"
         v-if="modal"
         @click.self="close"
       >
+        <!-- 
         <p @click="close" class="">
           <x-icon size="20" class="cursor-pointer"></x-icon>
         </p>
-        <div class="contents">
-          <slot />
+       -->
+        <div class="contents absolute">
+          <slot></slot>
         </div>
       </div>
     </transition>
@@ -19,7 +25,10 @@
 </template>
 
 <script>
-  import { CodeIcon, XIcon } from "vue-feather-icons";
+  import {
+    CodeIcon,
+    // XIcon
+  } from "vue-feather-icons";
 
   export default {
     data() {
@@ -29,7 +38,7 @@
     },
     components: {
       CodeIcon,
-      XIcon,
+      // XIcon,
     },
     methods: {
       open() {
@@ -43,6 +52,14 @@
 </script>
 
 <style lang="scss" scoped>
+  .code-bg {
+    background: white;
+  }
+  .dark {
+    .code-bg {
+      background: #1e2124;
+    }
+  }
   .my-modal {
     top: 0;
     bottom: 0;
@@ -57,14 +74,9 @@
     top: 50%;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
-    width: 500px;
-    height: 500px;
-    position: fixed;
-    color: #333;
-    background: aqua;
+    width: 80%;
+    max-height: 80%;
     border-radius: 5px;
-    -webkit-box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.1);
-    box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.1);
     h2 {
       border-bottom: 1px solid $gray;
     }

@@ -1,88 +1,88 @@
 <template>
   <div class="relative bg-sidebar hidden sm:block px-2">
     <nav class="text-base font-semibold pt-3 ">
-      <left-sidebar-item>
-        <book-icon size="20" class="mr-3"></book-icon>
+      <p
+        class="text-lg flex items-center  cursor-default opacity-75 hover:opacity-100 py-3 px-2 rounded-full pl-6"
+      >
         Documentation
-        <template #docume>
-          <router-link
-            to="/about"
-            class="flex items-center hover-left opacity-75 hover:opacity-100 py-3 px-2 rounded-full pl-6 nav-item text-gray"
-          >
-            <code-icon size="20" class="mr-3"></code-icon>
-            What is Laravue?
-          </router-link>
-        </template>
-      </left-sidebar-item>
+      </p>
+      <router-link
+        to="/about"
+        class="flex items-center hover-left opacity-75 hover:opacity-100 py-3 px-2 rounded-full pl-6 nav-item text-sm"
+      >
+        <code-icon size="14" class="mr-3"></code-icon>
+        What is Laravue?
+      </router-link>
 
-      <left-sidebar-item>
-        <cloud-icon size="20" class="mr-3"></cloud-icon>
+      <h3
+        class="text-lg flex items-center cursor-default opacity-75 hover:opacity-100 py-3 px-2 rounded-full pl-6"
+      >
         Components
-        <template #compo>
-          <router-link
-            to="/profile"
-            class="flex items-center hover-left opacity-75 hover:opacity-100 py-3 px-2 rounded-full pl-6 nav-item text-gray"
-          >
-            <user-icon size="20" class="mr-3"></user-icon>
-            Profile
-          </router-link>
+      </h3>
 
-          <router-link
-            to="/setting"
-            class="flex items-center hover-left opacity-75 hover:opacity-100 py-3 px-2 rounded-full pl-6 nav-item text-gray"
-          >
-            <settings-icon size="20" class="mr-3"></settings-icon>
-            Setting
-          </router-link>
-          <router-link
-            to="/tables"
-            class="flex items-center hover-left opacity-75 hover:opacity-100 py-3 px-2 rounded-full pl-6 nav-item text-gray"
-          >
-            <tablet-icon size="20" class="mr-3"></tablet-icon>
-            Tables
-          </router-link>
-          <router-link
-            to="/form"
-            class="flex items-center hover-left opacity-75 hover:opacity-100 py-3 px-2 rounded-full pl-6 nav-item text-gray"
-          >
-            <grid-icon size="20" class="mr-3"></grid-icon>
-            Form
-          </router-link>
-          <router-link
-            to="/darkmode"
-            class="flex items-center hover-left opacity-75 hover:opacity-100 py-3 px-2 rounded-full pl-6 nav-item text-gray"
-          >
-            <circle-icon size="20" class="mr-3"></circle-icon>
-            Darkmode
-          </router-link>
-          <router-link
-            to="/calendar"
-            class="flex items-center hover-left opacity-75 hover:opacity-100 py-3 px-2 rounded-full pl-6 nav-item text-gray"
-          >
-            <calendar-icon size="20" class="mr-3"></calendar-icon>
-            Calendar
-          </router-link>
-          <router-link
-            to="/info"
-            class="flex items-center hover-left opacity-75 hover:opacity-100 py-3 px-2 rounded-full pl-6 nav-item text-gray"
-          >
-            <info-icon size="20" class="mr-3"></info-icon>
-            F&Q
-          </router-link>
-          <router-link
-            to="/chart"
-            class="flex items-center hover-left opacity-75 hover:opacity-100 py-3 px-2 rounded-full pl-6 nav-item text-gray"
-          >
-            <bar-chart-icon size="20" class="mr-3"></bar-chart-icon>
-            Chart
-          </router-link>
-        </template>
-      </left-sidebar-item>
+      <router-link
+        to="/profile"
+        class="flex items-center hover-left opacity-75 hover:opacity-100 py-3 px-2 rounded-full pl-6 nav-item text-sm"
+      >
+        <user-icon size="14" class="mr-3"></user-icon>
+        Profile
+      </router-link>
+
+      <router-link
+        to="/setting"
+        class="flex items-center hover-left opacity-75 hover:opacity-100 py-3 px-2 rounded-full pl-6 nav-item text-sm"
+      >
+        <settings-icon size="14" class="mr-3"></settings-icon>
+        Setting
+      </router-link>
+      <router-link
+        to="/tables"
+        class="flex items-center hover-left opacity-75 hover:opacity-100 py-3 px-2 rounded-full pl-6 nav-item text-sm"
+      >
+        <tablet-icon size="14" class="mr-3"></tablet-icon>
+        Tables
+      </router-link>
+      <router-link
+        to="/form"
+        class="flex items-center hover-left opacity-75 hover:opacity-100 py-3 px-2 rounded-full pl-6 nav-item text-sm"
+      >
+        <grid-icon size="14" class="mr-3"></grid-icon>
+        Form
+      </router-link>
+      <router-link
+        to="/darkmode"
+        class="flex items-center hover-left opacity-75 hover:opacity-100 py-3 px-2 rounded-full pl-6 nav-item text-sm"
+      >
+        <circle-icon size="14" class="mr-3"></circle-icon>
+        Darkmode
+      </router-link>
+      <router-link
+        to="/calendar"
+        class="flex items-center hover-left opacity-75 hover:opacity-100 py-3 px-2 rounded-full pl-6 nav-item text-sm"
+      >
+        <calendar-icon size="14" class="mr-3"></calendar-icon>
+        Calendar
+      </router-link>
+      <router-link
+        to="/info"
+        class="flex items-center hover-left opacity-75 hover:opacity-100 py-3 px-2 rounded-full pl-6 nav-item text-sm"
+      >
+        <info-icon size="14" class="mr-3"></info-icon>
+        F&Q
+      </router-link>
+      <router-link
+        to="/chart"
+        class="flex items-center hover-left opacity-75 hover:opacity-100 py-3 px-2 rounded-full pl-6 nav-item text-sm"
+      >
+        <bar-chart-icon size="14" class="mr-3"></bar-chart-icon>
+        Chart
+      </router-link>
     </nav>
   </div>
 </template>
 <script>
-  import LeftSidebarItem from "@/components/layout/sidebar/LeftSidebarItem";
+  // import LeftSidebarItem from "@/components/layout/sidebar/LeftSidebarItem";
+  // import LvH3 from "@/components/object/text/LvH3";
 
   // icon
   import {
@@ -94,9 +94,9 @@
     InfoIcon,
     BarChartIcon,
     CircleIcon,
-    BookIcon,
+    // BookIcon,
     CodeIcon,
-    CloudIcon,
+    // CloudIcon,
   } from "vue-feather-icons";
   export default {
     name: "LeftSidebar",
@@ -106,7 +106,7 @@
       };
     },
     components: {
-      BookIcon,
+      // BookIcon,
       TabletIcon,
       CalendarIcon,
       SettingsIcon,
@@ -114,10 +114,11 @@
       InfoIcon,
       BarChartIcon,
       CircleIcon,
-      LeftSidebarItem,
+      // LeftSidebarItem,
       CodeIcon,
       UserIcon,
-      CloudIcon,
+      // LvH3,
+      // CloudIcon,
     },
   };
 </script>
@@ -138,8 +139,19 @@
   }
 
   .nav-item {
-    color: #333;
     transition: 0.2s ease-in;
+    color: #959ea7;
+    &:hover {
+      color: #1e2124;
+    }
+  }
+  .dark {
+    .nav-item {
+      color: #8e9091;
+      &:hover {
+        color: white;
+      }
+    }
   }
 
   // .router-link-active {
