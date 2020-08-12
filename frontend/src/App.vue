@@ -2,20 +2,27 @@
   <div id="app" class="flex flex-col" :class="mode">
     <header-nav :mode="mode" @toggle="toggle" class="header"></header-nav>
 
-    <div class="main w-full flex lg:px-24 overflow-y-scroll">
-      <left-sidebar class="w-1/5"></left-sidebar>
+    <div class="main w-full flex lg:pl-8 overflow-y-scroll">
+      <left-sidebar class="lg:w-1/6"></left-sidebar>
 
-      <div class=" w-3/5 overflow-x-hidden scroll-none flex flex-col mx-4">
-        <main class="main-bg w-full flex-grow p-6 rounded-lg">
-          <transition mode="out-in">
-            <router-view :mode="mode"></router-view>
-          </transition>
-        </main>
+      <div class="container-bg lg:w-5/6 overflow-x-hidden scroll-none flex flex-col lg:mx-4">
+          <div class="w-full flex">
+                    <main class="lg:w-4/5 main-bg flex-grow py-6 px-12 rounded-lg">
+            <transition mode="out-in">
+              <router-view :mode="mode"></router-view>
+            </transition>
+
+          </main>
+                                <div class="lg:w-1/5 py-6 px-4 break-words">
+                      aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+          </div>
+
 
         <footer-nav class="footer"></footer-nav>
+
+
       </div>
 
-      <div class="w-1/5"></div>
     </div>
   </div>
 </template>
@@ -55,8 +62,12 @@
   }
   .dark {
     .main-bg {
-      background: #151518;
+      background: transparent;
     }
+      .container-bg {
+        background: #16191b;
+      }
+
   }
   .header {
     height: 6rem;

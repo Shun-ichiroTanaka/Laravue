@@ -20,7 +20,7 @@
 <style lang="scss" scoped>
   .dark {
     footer {
-      background: #1e2124;
+      background: #16191b;
     }
   }
 </style>

@@ -1,18 +1,18 @@
 <template>
   <div>
     <header
-      class=" w-full lg:h-20 flex items-center py-2 lg:px-24 hidden sm:flex"
+      class="w-full lg:h-20 flex items-center py-2 lg:pl-8 hidden sm:flex"
     >
       <router-link
         to="/"
-        class="lg:w-1/5 text-2xl font-semibold uppercase cursor-pointer"
+        class="lg:w-1/6 text-2xl font-semibold uppercase cursor-pointer"
       >
         Laravue</router-link
       >
 
       <header-search></header-search>
 
-      <div class="lg:w-1/5 text-primary flex items-center justify-start">
+      <div class="lg:w-1/6 text-primary flex items-center justify-start">
         <div class="ml-4 mr-8">v.1.0.0</div>
         <toggle :mode="mode" @toggle="$emit('toggle')"></toggle>
       </div>

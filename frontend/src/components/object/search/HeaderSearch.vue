@@ -1,5 +1,5 @@
 <template>
-  <div class="lg:w-3/5 mx-4">
+  <div class="lg:w-2/3 mx-4">
     <form class="relative flex w-full h-full items-center">
       <input
         type="text"
