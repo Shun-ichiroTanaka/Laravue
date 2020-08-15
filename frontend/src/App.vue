@@ -30,7 +30,7 @@ import HeaderNav from "@/components/laravue_template/layout/header/HeaderNav";
 export default {
   data() {
     return {
-      mode: "dark",
+      mode: "light",
       loading: true,
     };
   },
