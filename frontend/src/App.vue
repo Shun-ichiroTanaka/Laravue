@@ -30,7 +30,7 @@ import HeaderNav from "@/components/laravue_template/layout/header/HeaderNav";
 export default {
   data() {
     return {
-      mode: "light",
+      mode: "dark",
       loading: true,
     };
   },
@@ -58,9 +58,6 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.header {
-  height: 6rem;
-}
 .v-enter {
   transform: translate(0, -30px);
   opacity: 0;
@@ -80,6 +77,6 @@ export default {
   opacity: 0;
 }
 .v-leave-active {
-  transition: all 0.3s 0s ease;
+  transition: all .3s 0s ease;
 }
 </style>

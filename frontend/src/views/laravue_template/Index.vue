@@ -33,23 +33,6 @@
   };
 </script>
 <style lang="scss" scoped>
-.main-bg {
-  background: #eff2f6;
-}
-.dark {
-  .main-bg {
-    background: transparent;
-  }
-  .container-bg {
-    background: #16191b;
-  }
-}
-.header {
-  height: 6rem;
-}
-.main {
-  height: calc(100vh - 6rem);
-}
 .v-enter {
   transform: translate(0, -30px);
   opacity: 0;
