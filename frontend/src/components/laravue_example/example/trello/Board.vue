@@ -8,6 +8,16 @@
       <draggable :list="lists"
             @end="movingList"
             class="list-index">
+
+        
+        <!-- 
+          # Listコンポーネントを呼び出し、propsのデータを受け取ります
+          # 受け渡すリストの配列データlistsをv-forディレクティブを使って展開
+          # v-forはlistsから展開された、現在の値itemとそのインデックスindexを受け取る
+          # itemからさらにlistsで定義されたオブジェクトのキーで値にアクセス
+          # v-forを使うとき、key属性を与えることが必須
+          # v-bindディレクティブを使ってバインド
+         -->
         <list v-for="(item, index) in lists"
               :key="item.id"
               :title="item.title"
@@ -15,6 +25,7 @@
               :listIndex="index"
               @change="movingCard"
         />
+
         <list-add/>
       </draggable>
     </main>

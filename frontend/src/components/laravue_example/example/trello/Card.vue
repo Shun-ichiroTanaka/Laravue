@@ -1,16 +1,20 @@
 <template>
-  <div class="card">
-    <button class="close-button" @click="removeCardFromList">
-      ×
+  <div class="card relative flex rounded-lg my-3">
+    <button class="close-button cursor-pointer btn-shadow" @click="removeCardFromList">
+      <x-icon size="14" class="custom-class"></x-icon>
     </button>
-    <div class="body">
+    <div class="body text-base w-full break-words p-4">
       {{ body }}
     </div>
   </div>
 </template>
 
 <script>
+import { XIcon } from 'vue-feather-icons'
 export default {
+  components: {
+    XIcon
+  },
   props: {
     body: {
       type: String,
