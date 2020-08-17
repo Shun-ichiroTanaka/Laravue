@@ -1,13 +1,12 @@
 <template>
   <div>
-    <header>
-      my Trello
-    </header>
     <main>
       <p class="info-line">All: {{ totalCardCount }} tasks</p>
-      <draggable :list="lists"
-            @end="movingList"
-            class="flex w-full overflow-scroll scroll-none">
+      <draggable 
+      :list="lists"
+      @end="movingList"
+      class="flex w-full overflow-scroll scroll-none"
+      >
 
         
         <!-- 

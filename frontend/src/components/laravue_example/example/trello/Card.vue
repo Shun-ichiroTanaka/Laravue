@@ -1,6 +1,6 @@
 <template>
   <div class="card relative flex rounded-lg my-3">
-    <button @click="removeCardFromList" class="close-button m-1 cursor-pointer lv-shadow">
+    <button @click="removeCardFromList" class="close-button m-1 cursor-pointer lv-rounded-lg">
       <x-icon size="14" class=""></x-icon>
     </button>
     <div class="body text-base w-full break-words p-4">

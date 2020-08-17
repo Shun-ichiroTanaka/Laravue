@@ -1,8 +1,8 @@
 
-.info-line {
-  margin: 20px;
-  font-size: 20px;
-}
+// .info-line {
+//   margin: 20px;
+//   font-size: 20px;
+// }
 
 .list-index {
   display: flex;
@@ -73,6 +73,12 @@
   padding: 15px;
 }
 
+.dark {
+  .list-counter {
+    color: rgb(0, 140, 255);
+    background: transparent;
+  }
+}
 .list-counter {
   color: rgb(0, 140, 255);
   background: #f7f7fb;
@@ -100,10 +106,10 @@
   top: 6px;
   right: 15px;
   font-size: 22px;
-  border-radius: 12px;
   background-color: #fff;
   color: #FE4757;
   padding: 8px;
+  transition: .3s ease;
   &:focus {
     outline: none;
   }
@@ -119,11 +125,11 @@
     position: absolute;
     top: 6px;
     right: 15px;
-    border-radius: 12px;
     border: #FE4757 solid 1px;
     background-color: transparent;
     color: #FE4757;
     padding: 8px;
+    transition: .3s ease;
     &:focus {
       outline: none;
     }
