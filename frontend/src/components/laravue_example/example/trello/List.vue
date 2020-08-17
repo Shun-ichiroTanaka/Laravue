@@ -2,25 +2,31 @@
   <div class="list">
     <div class="listheader">
       <p class="list-title">{{ title }}</p>
+      <p class="list-counter">total:{{totalCardInList}}</p>
       <div class="deletelist" @click="removeList">×</div>
     </div>
-    <card v-for="(item, index) in cards"
-          :body="item.body"
-          :key="item.id"
-          :cardIndex="index"
-          :listIndex="listIndex"
-    />
+    <draggable group="cards">
+      <card v-for="(item, index) in cards"
+            :body="item.body"
+            :key="item.id"
+            :cardIndex="index"
+            :listIndex="listIndex"
+      />
+      <card-add :listIndex="listIndex"/>
+    </draggable>
     <card-add :listIndex="listIndex" />
   </div>
 </template>
 
 <script>
+import draggable from 'vuedraggable'
 import Card from '@/components/laravue_example/example/trello/Card'
 import CardAdd from '@/components/laravue_example/example/trello/CardAdd'
 export default {
 components:{
-Card,
-CardAdd
+  draggable,
+  Card,
+  CardAdd
 },
 props:{
 title:{
