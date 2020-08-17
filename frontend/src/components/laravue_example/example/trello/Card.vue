@@ -1,19 +1,23 @@
 <template>
   <div class="card relative flex rounded-lg my-3">
-    <button class="close-button cursor-pointer btn-shadow" @click="removeCardFromList">
-      <x-icon size="14" class="custom-class"></x-icon>
+    <button @click="removeCardFromList" class="close-button m-1 cursor-pointer lv-shadow">
+      <x-icon size="14" class=""></x-icon>
     </button>
     <div class="body text-base w-full break-words p-4">
       {{ body }}
+      <lv-divider></lv-divider>
     </div>
   </div>
 </template>
 
 <script>
 import { XIcon } from 'vue-feather-icons'
+import LvDivider from '@/components/laravue_example/object/atoms/divider/LvDivider'
+
 export default {
   components: {
-    XIcon
+    XIcon,
+    LvDivider
   },
   props: {
     body: {

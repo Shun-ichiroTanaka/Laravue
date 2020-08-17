@@ -7,7 +7,7 @@
       <p class="info-line">All: {{ totalCardCount }} tasks</p>
       <draggable :list="lists"
             @end="movingList"
-            class="list-index">
+            class="flex w-full overflow-scroll scroll-none">
 
         
         <!-- 

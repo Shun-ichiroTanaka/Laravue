@@ -1,11 +1,12 @@
 
 <template>
-  <form class="addlist" @submit.prevent="addList">
+  <form class="addlist flex inline-block flex-col items-start" @submit.prevent="addList">
     <input v-model="title"
            type="text"
            class="text-input"
            placeholder="Add new list"
     >
+    <plus-icon size="1.5x" class="custom-class"></plus-icon>
     <button type="submit" class="add-button">
       Add
     </button>

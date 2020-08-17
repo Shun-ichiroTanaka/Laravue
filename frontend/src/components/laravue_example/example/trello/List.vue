@@ -1,10 +1,20 @@
 <template>
-  <div class="list">
-    <div class="listheader">
-      <p class="list-title">{{ title }}</p>
-      <p class="list-counter">total:{{totalCardInList}}</p>
-      <div class="deletelist" @click="removeList">×</div>
+  <div class="list relative inline-block flex flex-col items-start rounded-lg align-top p-4 my-0 mx-1">
+    
+
+    <div class="w-full listheader inline-flex justify-between">
+      <div class="list-title flex justify-center items-center">
+        {{ title }}
+        <span class="block list-counter rounded-full lv-shadow w-6 h-6 flex items-center justify-center lg:ml-2 text-base">
+          {{totalCardInList}}
+        </span>
+      </div>
+
+      <div class="flex justify-center items-center cursor-pointer">
+        <x-icon @click="removeList" size="14" class=""></x-icon>
+      </div>
     </div>
+
     <draggable group="cards"
               :list="cards"
               @end="$emit('change')">
@@ -14,8 +24,12 @@
             :cardIndex="index"
             :listIndex="listIndex"
       />
+
       <card-add :listIndex="listIndex"/>
+
     </draggable>
+
+
   </div>
 </template>
 
@@ -23,11 +37,14 @@
   import draggable from 'vuedraggable'
   import Card from '@/components/laravue_example/example/trello/Card'
   import CardAdd from '@/components/laravue_example/example/trello/CardAdd'
+  // icon
+  import { XIcon } from 'vue-feather-icons'
   export default {
     components:{
       draggable,
       Card,
-      CardAdd
+      CardAdd,
+      XIcon
     },
     // propsには、親コンポーネントから受け取るデータを定義できます
     // 受け取ったデータはdataプロパティと同じようにアクセスでき
