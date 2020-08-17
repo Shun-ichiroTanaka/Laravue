@@ -24,8 +24,8 @@
   </div>
 </template>
 <script>
-import Loading from '@/components/laravue_template/object/atoms/Loading'
-import HeaderNav from "@/components/laravue_template/layout/header/HeaderNav";
+import Loading from '@/components/laravue_example/object/atoms/Loading'
+import HeaderNav from "@/components/laravue_example/layout/header/HeaderNav";
 
 export default {
   data() {

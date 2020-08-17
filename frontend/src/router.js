@@ -14,45 +14,50 @@ const routes = [{
     path: "/",
     name: "Index",
     component: () =>
-      import("@/views/laravue_template/Index.vue")
+      import("@/views/laravue_example/Index.vue")
   },
   {
     path: "/home",
     name: "Home",
     component: () =>
-      import("@/views/laravue_template/Home.vue")
+      import("@/views/laravue_example/Home.vue")
   },
   {
     path: "/documentation",
     name: 'Documentation',
     component: () =>
-      import("@/views/laravue_template/Documentation.vue"),
+      import("@/views/laravue_example/Documentation.vue"),
   }, {
     path: '/about',
     name: 'Laravue',
     component: () =>
-      import("@/views/laravue_template/documentation/Laravue.vue"),
+      import("@/views/laravue_example/documentation/Laravue.vue"),
 
   }, {
     path: "/profile",
     name: "Profile",
     component: () =>
-      import("@/views/laravue_template/Profile.vue")
+      import("@/views/laravue_example/Profile.vue")
   }, {
     path: "/chart",
     name: "Chart",
     component: () =>
-      import("@/views/laravue_template/Chart.vue")
+      import("@/views/laravue_example/Chart.vue")
   }, {
     path: "/form",
     name: "Form",
     component: () =>
-      import("@/views/laravue_template/Form.vue")
+      import("@/views/laravue_example/Form.vue")
   }, {
     path: "/darkmode",
     name: "Darkmode",
     component: () =>
-      import("@/views/laravue_template/Darkmode.vue")
+      import("@/views/laravue_example/Darkmode.vue")
+  }, {
+    path: "/trello",
+    name: "Trello",
+    component: () =>
+      import("@/views/laravue_example/examples/trello/Trello.vue")
   }
 ];
 
