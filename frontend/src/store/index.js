@@ -1,6 +1,7 @@
 import Vue from "vue";
 import Vuex from "vuex";
-// import Trello from './laravue_example/trello';
+// import T
+// trello from './laravue_example/trello';
 
 Vue.use(Vuex);
 
@@ -10,9 +11,21 @@ Vue.use(Vuex);
 //   },
 // });
 
-const savedLists = localStorage.getItem('trello-lists')
+const savedLists = localStorage.getItem('trello-lists');
+
+if (localStorage.getItem('trello-lists')) {
+  try {
+      this.savedLists = JSON.parse(localStorage.getItem('trello-lists'));
+  } catch(e) {
+      localStorage.removeItem('trello-lists');
+  }
+}
+
 
 const store =  new Vuex.Store({
+
+  // アプリケーション全体のデータの状態を管理
+  // 現在のデータの状態を確認したり、特定のデータの状態を見つけるために役立つ
   state: {
     lists: savedLists ? JSON.parse(savedLists): [
       {
@@ -21,19 +34,11 @@ const store =  new Vuex.Store({
           { body: 'English' },
           { body: 'Mathematics' },
         ]
-      },
-      {
-        title: 'Todo',
-        cards: [
-          { body: 'Science' }
-        ]
-      },
-      {
-        title: 'Doing',
-        cards: []
       }
     ],
   },
+
+  // stateの更新だけを行う. 更新が行えるのはmutationsだけ
   mutations: {
     addlist(state, payload) {
       state.lists.push({ title: payload.title, cards:[] })
@@ -68,6 +73,9 @@ const store =  new Vuex.Store({
       context.commit('updateList', payload)
     }
   },
+
+  // stateの値を算出したものを返す場合に役立つ(Vueのcomputedと同様の動き)
+  // 値がキャシュされ、そのgettersが依存しているstateが更新されない限り再評価しない
   getters: {
     totalCardCount(state) {
       let count = 0

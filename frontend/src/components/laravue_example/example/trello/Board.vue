@@ -5,6 +5,7 @@
       <draggable 
       :list="lists"
       @end="movingList"
+      :options="options"
       class="flex w-full overflow-scroll scroll-none"
       >
 
@@ -38,6 +39,13 @@ import ListAdd from '@/components/laravue_example/example/trello/ListAdd'
 import { mapState } from 'vuex'
 
 export default {
+  data () {
+      return {
+          options: {
+              animation: 200
+          }
+      }
+  },
   components: {
     ListAdd,
     List,
@@ -57,7 +65,8 @@ export default {
     },
     movingList: function() {
       this.$store.dispatch('updateList', { lists: this.lists })
-    }
+    },
+    
   }
 }
 </script>

@@ -10,7 +10,7 @@
     class="text-input"
     placeholder="Add new list"
     >
-    <plus-icon size="1.5x" class=""></plus-icon>
+    <!-- <plus-icon size="1.5x" class=""></plus-icon> -->
     <button type="submit" class="add-button">
       Add
     </button>

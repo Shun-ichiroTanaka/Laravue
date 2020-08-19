@@ -1,12 +1,12 @@
 <template>
   <form :class="classList" @submit.prevent="addCardToList">
-    <input v-model="body"
+    <textarea v-model="body"
            type="text"
-           class="text-input"
+           class="text-input p-4"
            placeholder="Add new card"
            @focusin="startEditing"
            @focusout="finishEditing"
-    />
+    ></textarea>
     <button type="submit"
             class="add-button"
             v-if="isEditing || bodyExists">
@@ -59,7 +59,20 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-  input {
+  textarea {
     color: #333;
+    width: 500px;
+    height: 500px;
+    background: white;
+    resize: none;
+  }
+  .dark {
+    textarea {
+      color: white;
+      background: #1e2124;
+      width: 500px;
+      height: 500px;
+      resize: none;
+    }
   }
 </style>
