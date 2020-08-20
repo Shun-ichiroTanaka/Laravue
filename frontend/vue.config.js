@@ -5,7 +5,7 @@ module.exports = {
     disableHostCheck: true,
 
     // laravelとvueを接続
-    proxy: 'http://localhost:8000/',
+    proxy: 'http://localhost:8000/'
   },
 
   // ビルドされた静的ファイルをLaravelの公開ディレクトリに出力します。
@@ -16,15 +16,17 @@ module.exports = {
   //   '../backend/src/public/' : '/',
 
   // 生成されたHTMLファイルの場所を変更する
-  indexPath: process.env.NODE_ENV === 'production' ?
-    '../resources/views/app.blade.php' : 'index.html',
+  indexPath:
+    process.env.NODE_ENV === 'production'
+      ? '../resources/views/app.blade.php'
+      : 'index.html',
 
   // sannの取り込み
   css: {
     loaderOptions: {
       scss: {
-        prependData: '@import "./src/assets/sass/app.scss";',
-      },
-    },
-  },
+        prependData: '@import "./src/assets/sass/app.scss";'
+      }
+    }
+  }
 };

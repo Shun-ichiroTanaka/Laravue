@@ -10,11 +10,11 @@
         Laravue</router-link
       >
 
-      <header-search></header-search>
+      <HeaderSearch></HeaderSearch>
 
       <div class="lg:w-1/6 text-primary flex items-center justify-start">
         <div class="ml-4 mr-8">v.1.0.0</div>
-        <toggle :mode="mode" @toggle="$emit('toggle')"></toggle>
+        <Toggle :mode="mode" @toggle="$emit('toggle')"></Toggle>
       </div>
     </header>
 
@@ -23,22 +23,22 @@
   </div>
 </template>
 <script>
-  import HeaderSearch from  "@/components/laravue_example/object/search/HeaderSearch";
-  import Toggle from  "@/components/laravue_example/object/button/Toggle";
+import HeaderSearch from '@/components/laravue_example/object/search/HeaderSearch';
+import Toggle from '@/components/laravue_example/object/button/Toggle';
 
-  export default {
-    name: "HeaderNav",
-    data() {
-      return {
-        show: false,
-      };
-    },
-    components: {
-      HeaderSearch,
-      Toggle,
-    },
-    methods: {},
-    props: ["mode"],
-  };
+export default {
+  name: 'HeaderNav',
+  components: {
+    HeaderSearch,
+    Toggle
+  },
+  props: ['mode'],
+  data() {
+    return {
+      show: false
+    };
+  },
+  methods: {}
+};
 </script>
 <style lang="scss" scoped></style>

@@ -7,14 +7,14 @@
   </footer>
 </template>
 <script>
-  export default {
-    name: "FooterNav",
-  };
+export default {
+  name: 'FooterNav'
+};
 </script>
 <style lang="scss" scoped>
-  .dark {
-    footer {
-      background: #16191b;
-    }
+.dark {
+  footer {
+    background: #16191b;
   }
+}
 </style>

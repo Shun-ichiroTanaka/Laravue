@@ -22,9 +22,9 @@ export default {
   data() {
     return {
       loading: true
-    }
-  },
-}
+    };
+  }
+};
 </script>
 
 <style lang="scss" scoped>
@@ -63,7 +63,7 @@ export default {
         background: #01b6ad;
       }
       .circle--2 {
-        background: #1F2225;
+        background: #1f2225;
         animation: circle--2 ease 5s infinite;
       }
     }
@@ -77,7 +77,7 @@ export default {
     transform: translate(-50%, -50%);
     width: 100vw;
     height: 100vh;
-    background-color: #1F2225 !important;
+    background-color: #1f2225 !important;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -113,31 +113,31 @@ export default {
   }
 }
 @keyframes circle--1 {
-	0% {
-		top: 50%;
-	}
-	50% {
-		top: 120%;
-	}
-	100% {
-		top: 50%;
-	}
+  0% {
+    top: 50%;
+  }
+  50% {
+    top: 120%;
+  }
+  100% {
+    top: 50%;
+  }
 }
 @keyframes circle--2 {
-	0% {
-		top: 50%;
-	}
-	50% {
-		top: -50%;
-	}
-	100% {
-		top: 50%;
-	}
+  0% {
+    top: 50%;
+  }
+  50% {
+    top: -50%;
+  }
+  100% {
+    top: 50%;
+  }
 }
 
 @keyframes rotate {
-	to {
-		transform: rotate(360deg);
-	}
+  to {
+    transform: rotate(360deg);
+  }
 }
 </style>

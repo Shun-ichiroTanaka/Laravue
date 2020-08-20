@@ -1,8 +1,8 @@
 <template>
   <div class="relative bg-sidebar hidden sm:block">
-    <nav class="text-base font-semibold pt-3 ">
+    <nav class="text-base font-semibold pt-3">
       <p
-        class="text-lg flex items-center  cursor-default py-3 px-2 rounded-full"
+        class="text-lg flex items-center cursor-default py-3 px-2 rounded-full"
       >
         Documentation
       </p>
@@ -10,7 +10,7 @@
         to="/about"
         class="flex items-center hover-left opacity-75 hover:opacity-100 py-3 px-2 rounded-full nav-item text-sm"
       >
-        <code-icon size="14" class="mr-3"></code-icon>
+        <CodeIcon size="14" class="mr-3"></CodeIcon>
         What is Laravue?
       </router-link>
 
@@ -24,7 +24,7 @@
         to="/profile"
         class="flex items-center hover-left opacity-75 hover:opacity-100 py-3 px-2 rounded-full nav-item text-sm"
       >
-        <user-icon size="14" class="mr-3"></user-icon>
+        <UserIcon size="14" class="mr-3"></UserIcon>
         Profile
       </router-link>
 
@@ -32,49 +32,49 @@
         to="/setting"
         class="flex items-center hover-left opacity-75 hover:opacity-100 py-3 px-2 rounded-full nav-item text-sm"
       >
-        <settings-icon size="14" class="mr-3"></settings-icon>
+        <SettingsIcon size="14" class="mr-3"></SettingsIcon>
         Setting
       </router-link>
       <router-link
         to="/tables"
         class="flex items-center hover-left opacity-75 hover:opacity-100 py-3 px-2 rounded-full nav-item text-sm"
       >
-        <tablet-icon size="14" class="mr-3"></tablet-icon>
+        <TabletIcon size="14" class="mr-3"></TabletIcon>
         Tables
       </router-link>
       <router-link
         to="/form"
         class="flex items-center hover-left opacity-75 hover:opacity-100 py-3 px-2 rounded-full nav-item text-sm"
       >
-        <grid-icon size="14" class="mr-3"></grid-icon>
+        <GridIcon size="14" class="mr-3"></GridIcon>
         Form
       </router-link>
       <router-link
         to="/darkmode"
         class="flex items-center hover-left opacity-75 hover:opacity-100 py-3 px-2 rounded-full nav-item text-sm"
       >
-        <circle-icon size="14" class="mr-3"></circle-icon>
+        <CircleIcon size="14" class="mr-3"></CircleIcon>
         Darkmode
       </router-link>
       <router-link
         to="/calendar"
         class="flex items-center hover-left opacity-75 hover:opacity-100 py-3 px-2 rounded-full nav-item text-sm"
       >
-        <calendar-icon size="14" class="mr-3"></calendar-icon>
+        <CalendarIcon size="14" class="mr-3"></CalendarIcon>
         Calendar
       </router-link>
       <router-link
         to="/info"
         class="flex items-center hover-left opacity-75 hover:opacity-100 py-3 px-2 rounded-full nav-item text-sm"
       >
-        <info-icon size="14" class="mr-3"></info-icon>
+        <InfoIcon size="14" class="mr-3"></InfoIcon>
         F&Q
       </router-link>
       <router-link
         to="/chart"
         class="flex items-center hover-left opacity-75 hover:opacity-100 py-3 px-2 rounded-full nav-item text-sm"
       >
-        <bar-chart-icon size="14" class="mr-3"></bar-chart-icon>
+        <BarChartIcon size="14" class="mr-3"></BarChartIcon>
         Chart
       </router-link>
 
@@ -87,19 +87,35 @@
         to="/trello"
         class="flex items-center hover-left opacity-75 hover:opacity-100 py-3 px-2 rounded-full nav-item text-sm"
       >
-        <trello-icon size="13" class="mr-3"></trello-icon>
+        <TrelloIcon size="13" class="mr-3"></TrelloIcon>
         Trello
       </router-link>
     </nav>
   </div>
 </template>
 <script>
-  // import LeftSidebarItem from  "@/components/laravue_example/layout/sidebar/LeftSidebarItem";
-  // import LvH3 from  "@/components/laravue_example/object/text/LvH3";
+// import LeftSidebarItem from  "@/components/laravue_example/layout/sidebar/LeftSidebarItem";
+// import LvH3 from  "@/components/laravue_example/object/text/LvH3";
 
-  // icon
-  import {
-    UserIcon,
+// icon
+import {
+  UserIcon,
+  TabletIcon,
+  CalendarIcon,
+  SettingsIcon,
+  GridIcon,
+  InfoIcon,
+  BarChartIcon,
+  CircleIcon,
+  // BookIcon,
+  CodeIcon,
+  // CloudIcon,
+  TrelloIcon
+} from 'vue-feather-icons';
+export default {
+  name: 'LeftSidebar',
+  components: {
+    // BookIcon,
     TabletIcon,
     CalendarIcon,
     SettingsIcon,
@@ -107,74 +123,58 @@
     InfoIcon,
     BarChartIcon,
     CircleIcon,
-    // BookIcon,
+    // LeftSidebarItem,
     CodeIcon,
+    UserIcon,
+    // LvH3,
     // CloudIcon,
     TrelloIcon
-  } from "vue-feather-icons";
-  export default {
-    name: "LeftSidebar",
-    data() {
-      return {
-        show: false,
-      };
-    },
-    components: {
-      // BookIcon,
-      TabletIcon,
-      CalendarIcon,
-      SettingsIcon,
-      GridIcon,
-      InfoIcon,
-      BarChartIcon,
-      CircleIcon,
-      // LeftSidebarItem,
-      CodeIcon,
-      UserIcon,
-      // LvH3,
-      // CloudIcon,
-      TrelloIcon
-    },
-  };
+  },
+  data() {
+    return {
+      show: false
+    };
+  }
+};
 </script>
 <style lang="scss" scoped>
-  @import url("https://fonts.googleapis.com/css?family=Karla:400,700&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
 
-  .font-family-karla {
-    font-family: karla;
+.font-family-karla {
+  font-family: karla;
+}
+
+.bg-sidebar {
+  // background: #fff;
+  // height: calc(100vh - 6rem);
+  overflow: scroll;
+  &::-webkit-scrollbar {
+    display: none;
   }
+}
 
-  .bg-sidebar {
-    // background: #fff;
-    // height: calc(100vh - 6rem);
-    overflow: scroll;
-    &::-webkit-scrollbar {
-      display: none;
-    }
+.nav-item {
+  transition: 0.2s ease-in;
+  color: #959ea7;
+  &:hover {
+    color: #1e2124;
   }
-
+}
+.dark {
   .nav-item {
-    transition: 0.2s ease-in;
-    color: #959ea7;
+    color: #8e9091;
     &:hover {
-      color: #1e2124;
+      color: white;
     }
   }
-  .dark {
-    .nav-item {
-      color: #8e9091;
-      &:hover {
-        color: white;
-      }
-    }
-  }
+}
 
-  // .router-link-active {
-  //   color: white;
-  //   background: #23b5af;
-  // }
-  .hover-left:hover {
-    transform: translateX(7px);
-    transition: 0.2s ease-in;
-  }
+// .router-link-active {
+//   color: white;
+//   background: #23b5af;
+// }
+.hover-left:hover {
+  transform: translateX(7px);
+  transition: 0.2s ease-in;
+}
 </style>

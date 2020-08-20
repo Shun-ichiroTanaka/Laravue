@@ -1,15 +1,14 @@
-
 <template>
-  <form 
-  @submit.prevent="addList"
-  class="addlist flex inline-block flex-col items-start"
+  <form
+    class="addlist flex inline-block flex-col items-start"
+    @submit.prevent="addList"
   >
-    <input 
-    v-model="title"
-    type="text"
-    class="text-input"
-    placeholder="Add new list"
-    >
+    <input
+      v-model="title"
+      type="text"
+      class="text-input"
+      placeholder="Add new list"
+    />
     <!-- <plus-icon size="1.5x" class=""></plus-icon> -->
     <button type="submit" class="add-button">
       Add
@@ -18,16 +17,16 @@
 </template>
 <script>
 export default {
-  data: function() {
+  data: function () {
     return {
-      title: '',
-    }
+      title: ''
+    };
   },
   methods: {
-    addList: function() {
-      this.$store.dispatch('addlist', { title: this.title })
-      this.title = ''
-    },
+    addList: function () {
+      this.$store.dispatch('addlist', { title: this.title });
+      this.title = '';
+    }
   }
-}
+};
 </script>

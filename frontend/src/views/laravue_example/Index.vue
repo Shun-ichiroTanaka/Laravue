@@ -5,32 +5,36 @@
 
 <template>
   <div class="main w-full flex lg:pl-8 overflow-y-scroll">
-    <left-sidebar class="lg:w-1/6"></left-sidebar>
+    <LeftSidebar class="lg:w-1/6"></LeftSidebar>
 
-    <div class="container-bg lg:w-5/6 overflow-x-hidden scroll-none flex flex-col lg:mx-4">
+    <div
+      class="container-bg lg:w-5/6 overflow-x-hidden scroll-none flex flex-col lg:mx-4"
+    >
       <div class="w-full flex">
         <main class="lg:w-4/5 main-bg flex-grow py-6 px-12 rounded-lg">
           <h1>jijojgaio</h1>
         </main>
 
-        <div class="lg:w-1/5 py-6 px-4 break-words">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+        <div class="lg:w-1/5 py-6 px-4 break-words">
+          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        </div>
       </div>
-      <footer-nav class="footer"></footer-nav>
+      <FooterNav class="footer"></FooterNav>
     </div>
   </div>
 </template>
 <script>
-  import FooterNav from  "@/components/laravue_example/layout/footer/FooterNav";
-  import LeftSidebar from  "@/components/laravue_example/layout/sidebar/LeftSidebar";
+import FooterNav from '@/components/laravue_example/layout/footer/FooterNav';
+import LeftSidebar from '@/components/laravue_example/layout/sidebar/LeftSidebar';
 
-  export default {
-    name: "Index",
-    components: {
-      FooterNav,
-      LeftSidebar,
-    },
-    props: ["mode"],
-  };
+export default {
+  name: 'Index',
+  components: {
+    FooterNav,
+    LeftSidebar
+  },
+  props: ['mode']
+};
 </script>
 <style lang="scss" scoped>
 .v-enter {
