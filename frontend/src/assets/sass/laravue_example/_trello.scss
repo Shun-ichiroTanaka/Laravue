@@ -8,9 +8,15 @@
   display: flex;
 }
 
-.list, .addlist,.text-input {
+.list, .addlist,.text-input .card {
   width: 260px;
   min-width: 260px;
+}
+.dark {
+  .list, .addlist,.text-input .card {
+    width: 260px;
+    min-width: 260px;
+  }
 }
 
 .text-input {
@@ -31,13 +37,13 @@
 .add-button {
   margin-top: 15px;
   padding: 15px 18px;
-  // background-color: #999;
+  background-color: #999;
   border: none;
   border-radius: 8px;
   font-family: "Noto Sans Japanese", "Noto Sans", 'system-ui', sans-serif;
   font-weight: 700;
   font-size: 18px;
-  // color: #fff;
+  color: #fff;
 }
 
 .add-button:hover {
@@ -84,8 +90,30 @@
   cursor: pointer;
 }
 
+.add-card {
+  background: #E9ECF5;
+  color: #9DA4BF;
+  transition: .3s ease;
+  border: dotted 1.5px #97A3BC;
+
+  &:hover {
+    transform: translateY(-5px);
+    transition: .3s ease;
+  }
+}
 
 .dark {
+  .add-card {
+    background: #242728;
+    color: white;
+    transition: .3s ease;
+    border: none;
+
+    &:hover {
+      transform: translateY(-5px);
+      transition: .3s ease;
+    }
+  }
   .card {
     background: #eff2f6;
     transition: .3s ease;

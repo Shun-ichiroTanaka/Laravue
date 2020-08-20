@@ -27,25 +27,29 @@
 =================================================================== -->
 <template>
   <div class="main w-full flex lg:pl-8 overflow-y-scroll">
-    <left-sidebar class="lg:w-1/6"></left-sidebar>
+    <LeftSidebar class="lg:w-1/6"></LeftSidebar>
 
-    <div class="container-bg lg:w-5/6 overflow-x-hidden scroll-none flex flex-col lg:mx-4">
-      <main class="lg:w-full main-bg flex-grow py-6 px-12 rounded-lg">
-        <Board/>
+    <div
+      class="container-bg lg:w-5/6 overflow-hidden scroll-none flex flex-col lg:mx-4"
+    >
+      <main class="trello lg:w-full main-bg flex-grow px-12 rounded-lg">
+        <Board />
       </main>
-      <footer-nav class="footer"></footer-nav>
     </div>
   </div>
 </template>
 <script>
-import FooterNav from  "@/components/laravue_example/layout/footer/FooterNav";
-import LeftSidebar from  "@/components/laravue_example/layout/sidebar/LeftSidebar";
-import Board from '@/components/laravue_example/example/trello/Board'
+import LeftSidebar from '@/components/laravue_example/layout/sidebar/LeftSidebar';
+import Board from '@/components/laravue_example/example/trello/Board';
 export default {
   components: {
-    FooterNav,
-    LeftSidebar, 
+    LeftSidebar,
     Board
   }
-}
+};
 </script>
+<style lang="scss" scoped>
+.trello {
+  height: calc(100vh - 6rem);
+}
+</style>
