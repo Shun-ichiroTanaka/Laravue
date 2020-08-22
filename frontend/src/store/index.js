@@ -38,13 +38,18 @@ const store = new Vuex.Store({
   // stateの更新だけを行う. 更新が行えるのはmutationsだけ
   mutations: {
     addlist(state, payload) {
-      state.lists.push({ title: payload.title, cards: [] });
+      state.lists.push({ 
+        title: payload.title,
+        cards: [] 
+      });
     },
     removelist(state, payload) {
       state.lists.splice(payload.listIndex, 1);
     },
     addCardToList(state, payload) {
-      state.lists[payload.listIndex].cards.push({ body: payload.body });
+      state.lists[payload.listIndex].cards.push({ 
+        body: payload.body 
+      });
     },
     removeCardFromList(state, payload) {
       state.lists[payload.listIndex].cards.splice(payload.cardIndex, 1);
@@ -53,6 +58,7 @@ const store = new Vuex.Store({
       state.lists = payload.lists;
     }
   },
+  
   actions: {
     addlist(context, payload) {
       context.commit('addlist', payload);

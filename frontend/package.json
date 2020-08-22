@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "vue-cli-service serve --fix",
     "build": "rm -rf ../backend/src/public/assets && vue-cli-service build --no-clean --watch --mode production",
     "lint": "vue-cli-service lint"
   },
