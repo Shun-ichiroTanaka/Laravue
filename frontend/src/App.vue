@@ -7,17 +7,17 @@
     Author URL: https://github.com/Shun-ichiroTanaka
 ========================================================================================== -->
 <template>
-  <div id="app" class="flex flex-col h-screen overflow-hidden" :class="mode">
-    <Loading v-show="loading" />
+<div id="app" class="flex flex-col h-screen overflow-hidden" :class="mode">
+  <Loading v-show="loading" />
 
-    <div v-show="!loading">
-      <HeaderNav :mode="mode" class="header" @toggle="toggle"></HeaderNav>
+  <div v-show="!loading">
+    <HeaderNav :mode="mode" class="header" @toggle="toggle"></HeaderNav>
 
-      <transition mode="out-in">
-        <router-view :mode="mode"></router-view>
-      </transition>
-    </div>
+    <transition mode="out-in">
+      <router-view :mode="mode"></router-view>
+    </transition>
   </div>
+</div>
 </template>
 <script>
 import Loading from '@/components/laravue_example/object/atoms/Loading';
@@ -55,24 +55,24 @@ export default {
 </script>
 <style lang="scss" scoped>
 .v-enter {
-  transform: translate(0, -30px);
-  opacity: 0;
+    transform: translate(0, -30px);
+    opacity: 0;
 }
 .v-enter-to {
-  opacity: 1;
+    opacity: 1;
 }
 .v-enter-active {
-  transition: all 1s 0s ease;
+    transition: all 1s 0s ease;
 }
 .v-leave {
-  transform: translate(0, 0);
-  opacity: 1;
+    transform: translate(0, 0);
+    opacity: 1;
 }
 .v-leave-to {
-  transform: translate(0, 30px);
-  opacity: 0;
+    transform: translate(0, 30px);
+    opacity: 0;
 }
 .v-leave-active {
-  transition: all 0.3s 0s ease;
+    transition: all 0.3s 0s ease;
 }
 </style>

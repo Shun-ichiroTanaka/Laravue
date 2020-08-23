@@ -1,7 +1,7 @@
 <template>
 <div class="">
   <div @click="open" class="w-full text-base break-words p-4 cursor-pointer">
-    {{ cardTitle }}
+    {{ body }}
 
     <LvDivider></LvDivider>
   </div>
@@ -11,7 +11,7 @@
         <p @click="close" class="absolute z-50 close-btn p-4 rounded-full right-0 cursor-pointer">
           <XIcon size="20" class></XIcon>
         </p>
-        {{ cardTitle }}
+        {{ body }}
       </div>
     </div>
   </transition>
@@ -22,9 +22,7 @@ import {
   XIcon
 } from 'vue-feather-icons';
 import LvDivider from '@/components/laravue_example/object/atoms/divider/LvDivider';
-import {
-  mapState
-} from 'vuex';
+
 export default {
   components: {
     XIcon,
@@ -35,23 +33,16 @@ export default {
       modal: false,
     };
   },
-  computed: {
-    ...mapState(['lists']),
-    cardTitle() {
-      return this.$store.getters.cardTitle;
-    }
-  },
   props: {
-    // propsでデータを受け取る時は、型などの条件を指定できます
-    title: {
+    body: {
       type: String,
       required: true
     },
-    cards: {
-      type: Array,
+    listIndex: {
+      type: Number,
       required: true
     },
-    listIndex: {
+    cardIndex: {
       type: Number,
       required: true
     }
@@ -89,7 +80,7 @@ export default {
     width: 60%;
     height: 80%;
     border-radius: 5px;
-    background: white;
+    background: #fff;
     h2 {
         border-bottom: 1px solid $gray;
     }
@@ -116,24 +107,6 @@ export default {
             height: 100%;
         }
     }
-}
-.v-enter-active,
-.v-leave-active {
-    transition: opacity 0.3s ease;
-}
-.v-enter,
-.v-leave-to {
-    opacity: 0;
-}
-.v-enter-active > .contents,
-.v-leave-active > .contents {
-    transition: all 0.3s ease;
-}
-.v-enter > .contents {
-    transform: translateY(-100%);
-}
-.v-leave-to > .contents {
-    transform: translateY(-100%);
 }
 
 .dark {

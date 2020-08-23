@@ -57,7 +57,7 @@ export default {
 }
 
 // .router-link-active {
-//   color: white;
+//   color: #fff;
 //   background: #23b5af;
 // }
 .hover-left:hover {
@@ -65,7 +65,7 @@ export default {
   transition: 0.2s ease-in;
 }
 .leftside-bg {
-  background: white;
+  background: #fff;
 }
 .dark {
   .leftside-bg {

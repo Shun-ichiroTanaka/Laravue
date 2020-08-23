@@ -71,7 +71,7 @@ export default {
 <style lang="scss" scoped>
 .dropdown-menu {
   top: 60px;
-  background: white;
+  background: #fff;
 }
 .dark {
   .dropdown-menu {
@@ -80,7 +80,7 @@ export default {
 }
 .header-profile {
   height: 4rem;
-  background: white;
+  background: #fff;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 }
 .dark {

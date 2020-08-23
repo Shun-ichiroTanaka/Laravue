@@ -1,16 +1,26 @@
 <template>
-<div class="">
+<div>
   <button @click="open" class="close-button m-1 cursor-pointer lv-rounded-lg">
     <XIcon size="14" class=""></XIcon>
   </button>
 
   <transition>
-    <div @click.self="close" v-if="modal" class="my-modal fixed w-full flex justify-center items-center">
-      <div class="modal-contents absolute">
-        本当に削除してよろしいですか？
+    <div v-if="modal" @click.self="close" class="my-modal fixed w-full flex justify-center items-center">
+      <div class="modal-contents absolute flex flex-col p-6">
+        <div class="flex justify-end">
+          <p @click="close" class="lv-rounded-lg p-2 border cursor-pointer">
+            <XIcon size="14" class=""></XIcon>
+          </p>
+        </div>
+
+        <div class="flex justify-center p-6">
+          本当に削除してよろしいですか？
+        </div>
+
         <LvDivider></LvDivider>
-        <p @click="close" class="absolute z-50 close-btn p-4 rounded-full right-0 cursor-pointer">キャンセル</p>
-        <p @click="removeCardFromList">消す</p>
+        <div class="flex w-full justify-center">
+          <p @click="removeCardFromList" class="delete-btn p-4 lv-rounded-lg cursor-pointer">削除する</p>
+        </div>
       </div>
     </div>
   </transition>
@@ -64,9 +74,9 @@ export default {
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     width: 60%;
-    height: 80%;
+    // height: 80%;
     border-radius: 5px;
-    background: white;
+    background: #fff;
     h2 {
         border-bottom: 1px solid $gray;
     }
@@ -80,8 +90,8 @@ export default {
         top: 50%;
         -webkit-transform: translateY(-50%);
         transform: translateY(-50%);
-        width: 70%;
-        height: 70%;
+        width: 500px;
+        // height: 200px;
         border-radius: 5px;
         background: #1e2124;
         h2 {
@@ -93,28 +103,32 @@ export default {
         }
     }
 }
-.v-enter-active,
-.v-leave-active {
-    transition: opacity 0.3s ease;
-}
-.v-enter,
-.v-leave-to {
-    opacity: 0;
-}
-.v-enter-active > .contents,
-.v-leave-active > .contents {
-    transition: all 0.3s ease;
-}
-.v-enter > .contents {
-    transform: translateY(-100%);
-}
-.v-leave-to > .contents {
-    transform: translateY(-100%);
-}
 
 .dark {
-    .close-btn {
-        color: white !important;
+    .delete-btn {
+        color: #fff !important;
+    }
+}
+.delete-btn {
+    background-color: #fff;
+    color: #FE4757;
+    padding: 8px;
+    &:focus {
+        outline: none;
+    }
+    &:hover {
+        background-color: #FE4757;
+        color: #fff;
+    }
+}
+.dark {
+    .delete-btn {
+        background-color: #FE4757;
+        color: #fff;
+        padding: 8px;
+        &:focus {
+            outline: none;
+        }
     }
 }
 </style>

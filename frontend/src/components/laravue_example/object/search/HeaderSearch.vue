@@ -32,7 +32,7 @@ export default {
 
         &:focus {
             outline: 0;
-            background: white;
+            background: #fff;
             border: 1px solid #bac2c6;
             transition: 0.25s ease;
         }
@@ -53,11 +53,11 @@ export default {
                 border: none;
             }
             &::placeholder {
-                color: white;
+                color: #fff;
             }
         }
         &-icon {
-            stroke: white;
+            stroke: #fff;
         }
     }
 }

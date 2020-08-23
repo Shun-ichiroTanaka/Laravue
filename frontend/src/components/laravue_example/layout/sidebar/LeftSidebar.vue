@@ -128,7 +128,7 @@ export default {
     .nav-item {
         color: #8e9091;
         &:hover {
-            color: white;
+            color: #fff;
         }
     }
 }
@@ -138,7 +138,7 @@ export default {
     transition: 0.2s ease;
 }
 .dark .router-link-active {
-    color: white;
+    color: #fff;
     transition: 0.2s ease;
 }
 

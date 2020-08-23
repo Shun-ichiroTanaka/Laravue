@@ -53,7 +53,7 @@ export default {
 
 <style lang="scss" scoped>
 .code-bg {
-  background: white;
+  background: #fff;
 }
 .dark {
   .code-bg {

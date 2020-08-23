@@ -61,7 +61,7 @@ export default {
 }
 
 .lv-box {
-  background: white;
+  background: #fff;
 }
 .dark {
   .lv-box {

@@ -1,71 +1,94 @@
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 
 * {
-    box-sizing: border-box !important;
+  box-sizing: border-box !important;
 }
 
 body {
-    background: #fff;
-    clear: both !important;
-    font-family: "Varela Round", sans-serif;
+  background : #fff;
+  clear      : both !important;
+  font-family: "Varela Round", sans-serif;
 }
 
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.3s ease !important;
+}
+
+.v-enter,
+.v-leave-to {
+  opacity: 0 !important;
+}
+
+.v-enter-active > .contents,
+.v-leave-active > .contents {
+  transition: all 0.3s ease !important;
+}
+
+.v-enter > .contents {
+  transform: translateY(-100%) !important;
+}
+
+.v-leave-to > .contents {
+  transform: translateY(-100%) !important;
+}
 
 .lv {
-    &:hover {
-        background: $bg-white;
-    }
+  &:hover {
+    background: $bg-white;
+  }
 
-    &-shadow {
-        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1) !important;
-    }
-    &-rounded-lg {
-      border-radius: 12px !important;
-    }
+  &-shadow {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1) !important;
+  }
+
+  &-rounded-lg {
+    border-radius: 12px !important;
+  }
 }
 
 .scroll-none {
-    -ms-overflow-style: none !important;
-    scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+  scrollbar-width   : none !important;
 
-    &::-webkit-scrollbar {
-        display: none !important;
-    }
+  &::-webkit-scrollbar {
+    display: none !important;
+  }
 }
 
 .dropdown-bg {
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 2;
+  width   : 100vw;
+  height  : 100vh;
+  position: absolute;
+  top     : 0;
+  bottom  : 0;
+  left    : 0;
+  right   : 0;
+  z-index : 2;
 }
 
 .dark {
-    background: $black;
+  background: $black;
+  color     : $white;
+
+  a {
     color: $white;
+  }
 
-    a {
-        color: $white;
-    }
-
-    strong {
-        color: $white;
-    }
-
-
+  strong {
+    color: $white;
+  }
 }
 
 .main-bg {
   background: #eff2f6;
 }
+
 .dark {
   .main-bg {
     background: transparent;
   }
+
   .container-bg {
     background: #16191b;
   }
@@ -73,6 +96,7 @@ body {
 // .header {
 //   height: 6rem;
 // }
+
 .main {
   height: calc(100vh - 6rem);
 }
