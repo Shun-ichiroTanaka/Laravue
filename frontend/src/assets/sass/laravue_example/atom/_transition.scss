@@ -1,0 +1,24 @@
+// down
+
+.down-enter-active,
+.down-leave-active {
+  transition: opacity 0.3s ease !important;
+}
+
+.down-enter,
+.down-leave-to {
+  opacity: 0 !important;
+}
+
+.down-enter-active > .lv-b-transition,
+.down-leave-active > .lv-b-transition {
+  transition: all 0.3s ease !important;
+}
+
+.down-enter > .lv-b-transition {
+  transform: translateY(-100%) !important;
+}
+
+.down-leave-to > .lv-b-transition {
+  transform: translateY(-100%) !important;
+}

@@ -2,8 +2,8 @@
 <form :class="classList" @submit.prevent="addCardToList">
   <textarea v-model="body" type="text" class="text-input px-4 pb-4 pt-16" placeholder="Add new card" @focusin="startEditing" @focusout="finishEditing"></textarea>
 
-  <transition>
-    <button @click="close" v-if="isEditing || bodyExists" type="submit" class="add-button">
+  <transition name="down">
+    <button @click="close" v-if="isEditing || bodyExists" type="submit" class="lv-b-transition add-button">
       Add
     </button>
   </transition>

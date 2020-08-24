@@ -4,9 +4,9 @@
     <XIcon size="14" class=""></XIcon>
   </button>
 
-  <transition>
-    <div v-if="modal" @click.self="close" class="my-modal fixed w-full flex justify-center items-center">
-      <div class="modal-contents absolute flex flex-col p-6">
+  <transition name="down">
+    <div v-if="modal" @click.self="close" class=" my-modal fixed w-full flex justify-center items-center">
+      <div class="lv-b-transition modal-contents absolute flex flex-col p-6">
         <div class="flex justify-end">
           <p @click="close" class="lv-rounded-lg p-2 border cursor-pointer">
             <XIcon size="14" class=""></XIcon>

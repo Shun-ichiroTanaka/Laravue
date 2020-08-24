@@ -40,9 +40,9 @@
   <div @click="open" @close="aaa" class="add-card list-border-doted rounded-lg py-3 px-4 w-full cursor-pointer flex justify-center items-center">
     <PlusIcon size="1.5x" class></PlusIcon>
   </div>
-  <transition>
+  <transition name="down">
     <div v-if="modal" class="my-modal fixed w-full flex justify-center items-center">
-      <div class="contents absolute">
+      <div class="lv-b-transition contents absolute">
         <p class="absolute z-50 close-btn p-4 rounded-full right-0 cursor-pointer" @click="close">
           <XIcon size="20" class></XIcon>
         </p>

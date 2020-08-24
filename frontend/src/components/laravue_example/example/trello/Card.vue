@@ -33,9 +33,9 @@
       <XIcon size="14" class=""></XIcon>
     </div>
 
-    <transition>
+    <transition name="down">
       <div v-if="show" @click.self="show = !show" class="my-modal fixed w-full flex justify-center items-center">
-        <div class="modal-contents absolute flex flex-col p-6">
+        <div class="lv-b-transition modal-contents absolute flex flex-col p-6">
           <div class="flex justify-end">
             <p @click="show = !show" class="lv-rounded-lg p-2 border cursor-pointer">
               <XIcon size="14" class=""></XIcon>
@@ -61,9 +61,9 @@
 
       <!-- <LvDivider></LvDivider> -->
     </div>
-    <transition>
+    <transition name="down">
       <div @click.self="close" v-if="modal" class="my-modal fixed w-full flex justify-center items-center">
-        <div class="contents absolute">
+        <div class="lv-b-transition contents absolute">
           <p @click="close" class="absolute z-50 close-btn p-4 rounded-full right-0 cursor-pointer">
             <XIcon size="20" class></XIcon>
           </p>

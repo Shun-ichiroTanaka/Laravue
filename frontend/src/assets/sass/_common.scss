@@ -10,29 +10,6 @@ body {
   font-family: "Varela Round", sans-serif;
 }
 
-.v-enter-active,
-.v-leave-active {
-  transition: opacity 0.3s ease !important;
-}
-
-.v-enter,
-.v-leave-to {
-  opacity: 0 !important;
-}
-
-.v-enter-active > .contents,
-.v-leave-active > .contents {
-  transition: all 0.3s ease !important;
-}
-
-.v-enter > .contents {
-  transform: translateY(-100%) !important;
-}
-
-.v-leave-to > .contents {
-  transform: translateY(-100%) !important;
-}
-
 .lv {
   &:hover {
     background: $bg-white;
