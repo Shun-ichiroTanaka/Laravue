@@ -34,20 +34,19 @@
     </div>
 
     <transition name="down">
-      <div v-if="show" @click.self="show = !show" class="my-modal fixed w-full flex justify-center items-center">
+      <div v-if="show" @click.self="show = !show" class="lv-rounded-lg my-modal fixed w-full flex justify-center items-center">
         <div class="lv-b-transition modal-contents absolute flex flex-col p-6">
-          <div class="flex justify-end">
-            <p @click="show = !show" class="lv-rounded-lg p-2 border cursor-pointer">
-              <XIcon size="14" class=""></XIcon>
-            </p>
-          </div>
+          <p @click="show = !show" class="absolute delete-cancel lv-rounded-lg p-2 border cursor-pointer">
+            <XIcon size="14" class=""></XIcon>
+          </p>
 
-          <div class="flex justify-center p-6">
-            本当に削除してよろしいですか？
+          <div class="flex flex-col items-center justify-center p-6 mt-4">
+            <alert-circle-icon size="120" class="alert"></alert-circle-icon>
+            <p class="text-3xl font-semibold mb-4 mt-6">Are you sure?</p>
           </div>
 
           <div class="flex w-full justify-center">
-            <p @click="removeCardFromList" class="delete-btn p-4 lv-rounded-lg cursor-pointer">削除する</p>
+            <p @click="removeCardFromList" class="delete-btn p-4 rounded-full cursor-pointer">削除する</p>
           </div>
         </div>
       </div>
@@ -80,14 +79,15 @@
 // import DeleteConfirm from '@/components/laravue_example/example/trello/modal/DeleteConfirm';
 // import CardDetail from '@/components/laravue_example/example/trello/modal/CardDetail';
 import {
-  XIcon
+  XIcon,
+  AlertCircleIcon
 } from 'vue-feather-icons';
 // import LvDivider from '@/components/laravue_example/object/atoms/divider/LvDivider';
 
 export default {
   components: {
     XIcon,
-    // LvDivider,
+    AlertCircleIcon // LvDivider,
   },
   data() {
     return {
@@ -197,8 +197,9 @@ export default {
     top: 50%;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
-    width: 60%;
+    // width: 60%;
     // height: 80%;
+    min-width: 450px;
     border-radius: 5px;
     background: #fff;
     h2 {
@@ -214,7 +215,7 @@ export default {
         top: 50%;
         -webkit-transform: translateY(-50%);
         transform: translateY(-50%);
-        width: 500px;
+        min-width: 450px;
         // height: 200px;
         border-radius: 5px;
         background: #1e2124;
@@ -234,16 +235,10 @@ export default {
     }
 }
 .delete-btn {
-    background-color: #fff;
-    color: #FE4757;
     padding: 8px;
-    &:focus {
-        outline: none;
-    }
-    &:hover {
-        background-color: #FE4757;
-        color: #fff;
-    }
+    background-color: #FE4757;
+    color: #fff;
+
 }
 .dark {
     .delete-btn {
@@ -252,6 +247,40 @@ export default {
         padding: 8px;
         &:focus {
             outline: none;
+        }
+    }
+}
+.alert {
+    color: #FE4461;
+}
+.delete-cancel {
+    top: -10px;
+    right: -10px;
+    transition: 0.3s ease;
+    background: #fff;
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        top: -13px;
+        transition: 0.3s ease;
+    }
+}
+.dark {
+    .delete-cancel {
+        top: -10px;
+        right: -10px;
+        transition: 0.3s ease;
+        background: #16191b;
+
+        &:focus {
+            outline: none;
+        }
+
+        &:hover {
+            top: -14px;
+            transition: 0.3s ease;
         }
     }
 }
